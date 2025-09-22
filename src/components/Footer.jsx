@@ -4,7 +4,7 @@ export default function Footer() {
   return (
     <footer className="bg-gray-900 text-gray-300 py-6">
       <div className="max-w-6xl mx-auto px-4 grid grid-cols-1 md:grid-cols-3 gap-6">
-        {/* Brand */}
+    
         <div>
           <h2 className="text-xl font-bold text-white">JBox</h2>
           <p className="text-sm mt-2">
@@ -13,7 +13,6 @@ export default function Footer() {
           </p>
         </div>
 
-        {/* Navigation */}
         <div>
           <h3 className="text-lg font-semibold text-white mb-2">Quick Links</h3>
           <ul className="space-y-1 text-sm">
@@ -24,7 +23,6 @@ export default function Footer() {
           </ul>
         </div>
 
-        {/* Socials */}
         <div>
           <h3 className="text-lg font-semibold text-white mb-2">Follow Us</h3>
           <div className="flex gap-4 text-xl">
@@ -35,7 +33,6 @@ export default function Footer() {
         </div>
       </div>
 
-      {/* Bottom Bar */}
       <div className="text-center text-sm text-gray-500 mt-6 border-t border-gray-700 pt-4">
         <p>© 2025 JBox Application. All rights reserved.</p>
       </div>

@@ -1,6 +1,6 @@
 export default function Navbar() {
   return (
-    <nav className="bg-blue-600 text-white px-6 py-4 flex justify-between items-center">
+    <nav className="bg-green-400 text-white px-6 py-4 flex justify-between items-center">
       <h1 className="text-2xl font-bold">Job-Box</h1>
 
       <ul className="flex space-x-6">
