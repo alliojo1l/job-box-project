@@ -52,7 +52,7 @@ export default function ContactPage() {
         />
         <button
           type="submit"
-          className="px-6 py-2 bg-blue-600 text-white rounded-lg hover:bg-green-500"
+          className="px-6 py-2 bg-gray-300 text-white rounded-lg hover:bg-green-500"
         >
           Send Message
         </button>

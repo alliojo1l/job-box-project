@@ -1,14 +1,40 @@
-export default function Navbar() {
-  return (
-    <nav className="bg-green-400 text-white px-6 py-4 flex justify-between items-center">
-      <h1 className="text-2xl font-bold">Job-Box</h1>
+"use client";
 
+import Link from "next/link";
+import { usePathname } from "next/navigation";
+
+export default function Navbar() {
+  const pathname = usePathname();
+
+  const links = [
+    { href: "/", label: "Home" },
+    { href: "/jobs", label: "Jobs" },
+    { href: "/about", label: "About" },
+    { href: "/contact", label: "Contact" },
+    { href: "/faq", label: "FAQ" },
+  ];
+
+  return (
+    <nav className="bg-green-400 text-white px-6 py-4 flex justify-between items-center shadow-md">
+      {/* Logo */}
+      <h1 className="text-2xl font-bold">J-Box</h1>
+
+      {/* Links */}
       <ul className="flex space-x-6">
-        <li><a href="/" className="hover:text-gray-200">Home</a></li>
-        <li><a href="/jobs" className="hover:text-gray-200">Jobs</a></li>
-        <li><a href="/about" className="hover:text-gray-200">About</a></li>
-        <li><a href="/contact" className="hover:text-gray-200">Contact</a></li>
-        <li><a href="/faq" className="hover:text-gray-200">FAQ</a></li>
+        {links.map((link) => (
+          <li key={link.href}>
+            <Link
+              href={link.href}
+              className={`px-3 py-2 rounded-md transition ${
+                pathname === link.href
+                  ? "bg-white text-green-600 font-semibold"
+                  : "hover:bg-green-500 hover:text-white"
+              }`}
+            >
+              {link.label}
+            </Link>
+          </li>
+        ))}
       </ul>
     </nav>
   );

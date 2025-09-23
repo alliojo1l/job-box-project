@@ -9,7 +9,18 @@ export default function Home() {
         className="relative text-center text-white rounded-2xl p-12 shadow bg-cover bg-center"
         style={{ backgroundImage: "url('/hero-bg.jpg')" }} 
       >
-        <div className="absolute inset-0 bg-black bg-opacity-50 rounded-2xl"></div> 
+        <main
+  className="p-8 min-h-screen bg-cover bg-center rounded-2xl"
+  style={{ backgroundImage: "url('https://cdn.pixabay.com/photo/2015/05/08/10/37/green-757879_1280.jpg')" }}
+>
+  <div className="bg-white bg-opacity-50 p-8 rounded-xl max-w-3xl mx-auto text-green-400">
+    <h1 className="text-8xl font-bold mb-12">Find Your Dream Job</h1>
+    <p className="text-8x1 font-bold">
+      Browse categories, explore opportunities, and take the next step in your career journey.
+    </p>
+  </div>
+</main>
+
         <div className="relative z-10">
           <h1 className="text-4xl font-bold mb-4">Welcome to JBox</h1>
           <p className="text-lg mb-6">
@@ -17,9 +28,9 @@ export default function Home() {
           </p>
           <Link
             href="/jobs"
-            className="bg-white text-green-600 px-6 py-3 rounded-lg font-semibold hover:bg-gray-100"
-          >
-            Browse All Jobs
+              className=" text-green-600 px-6 py-3 rounded-lg font-bold hover:bg-green-400"
+            >
+           <button>Browse All Jobs</button> 
           </Link>
         </div>
       </section>
@@ -55,7 +66,7 @@ export default function Home() {
           </div>
           <div className="p-6 bg-white rounded-lg shadow">
             <h3 className="text-xl font-semibold mb-2">3. Get Hired</h3>
-            <p>Employers will reach out if you’re shortlisted. Start your journey!</p>
+            <p>Employers will reach out if you are shortlisted. Start your journey!</p>
           </div>
         </div>
       </section>

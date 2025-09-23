@@ -1,9 +1,17 @@
-export default function JobCard({ title, company, location }) {
+// components/JobCard.jsx
+import Link from "next/link";
+
+export default function JobCard({ job, categorySlug }) {
   return (
-    <div className="p-4 border rounded-lg shadow-md bg-white hover:shadow-lg transition">
-      <h2 className="text-lg font-semibold">{title}</h2>
-      <p className="text-gray-600">{company}</p>
-      <p className="text-sm text-gray-500">{location}</p>
+    <div className="border rounded-lg p-4 shadow hover:shadow-lg transition">
+      <h3 className="text-lg font-semibold">{job.title}</h3>
+      <p className="text-gray-600 text-sm">{job.shortDescription}</p>
+      <Link 
+        href={`/jobs/${categorySlug}/${job.slug}`} 
+        className="mt-2 inline-block text-blue-600 hover:underline"
+      >
+        View Details
+      </Link>
     </div>
   );
 }

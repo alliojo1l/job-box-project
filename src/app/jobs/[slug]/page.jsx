@@ -1,33 +1,33 @@
-"use client";
-import { useParams } from "next/navigation";
 import { categories } from "@/data/jobs";
-import { useState } from "react";
+import Link from "next/link";
 
-export default function JobDetails() {
-  const { slug } = useParams();
-  const job = categories.flatMap((c) => c.jobs).find((j) => j.slug === slug);
+export default function JobDetailsPage({ params }) {
+  const { slug } = params;
 
-  const [applied, setApplied] = useState(false);
+  // Find the job
+  const job = categories.flatMap((c) => c.jobs).find((job) => job.slug === slug);
 
-  if (!job) return <p>Job not found</p>;
+  if (!job) {
+    return <p className="p-8 text-red-500">Job not found</p>;
+  }
 
   return (
-    <main className="p-8">
-      <h1 className="text-3xl font-bold">{job.title}</h1>
-      <p className="mt-4">{job.description}</p>
+    <main className="p-8 max-w-3xl mx-auto">
+      <h1 className="text-3xl font-bold mb-4">{job.title}</h1>
+      <p className="text-gray-500 mb-6">{job.company} • {job.location}</p>
 
-      {!applied ? (
-        <button 
-          onClick={() => setApplied(true)} 
-          className="mt-6 px-6 py-2 bg-blue-600 text-white rounded-lg hover:bg-green-600"
-        >
-          Apply Now
-        </button>
-      ) : (
-        <div className="mt-6 p-4 border rounded bg-blue-100 text-green-800">
-           Application submitted! successfully✅
-        </div>
-      )}
+      <p className="text-lg mb-6">{job.longDescription}</p>
+
+      <p className="text-green-600 font-semibold mb-6">
+        Salary: {job.salary}
+      </p>
+
+      <Link
+        href={`/jobs/${job.slug}/apply`}
+        className="inline-block px-6 py-3 bg-green-500 text-white font-semibold rounded-lg hover:bg-green-600"
+      >
+        Apply Now
+      </Link>
     </main>
   );
 }
