@@ -1,33 +1,64 @@
+"use client";
+import { useParams } from "next/navigation";
 import { categories } from "@/data/jobs";
-import Link from "next/link";
 
-export default function JobDetailsPage({ params }) {
-  const { slug } = params;
+export default function ApplyPage() {
+  const { slug } = useParams();
+  const job = categories.flatMap(c => c.jobs).find(j => j.slug === slug);
 
-  // Find the job
-  const job = categories.flatMap((c) => c.jobs).find((job) => job.slug === slug);
-
-  if (!job) {
-    return <p className="p-8 text-red-500">Job not found</p>;
-  }
+  if (!job) return <p className="p-8">Job not found.</p>;
 
   return (
-    <main className="p-8 max-w-3xl mx-auto">
-      <h1 className="text-3xl font-bold mb-4">{job.title}</h1>
-      <p className="text-gray-500 mb-6">{job.company} • {job.location}</p>
+    <main className="p-8 max-w-2xl mx-auto">
+      <h1 className="text-2xl font-bold mb-6">Apply for {job.title}</h1>
 
-      <p className="text-lg mb-6">{job.longDescription}</p>
+      <form className="space-y-6 bg-white p-6 rounded-xl shadow">
+        <div>
+          <label className="block text-sm font-medium text-gray-700">Full Name</label>
+          <input
+            type="text"
+            placeholder="Your full name"
+            className="w-full mt-2 p-3 border rounded-lg focus:ring-2 focus:ring-green-500"
+            required
+          />
+        </div>
 
-      <p className="text-green-600 font-semibold mb-6">
-        Salary: {job.salary}
-      </p>
+        <div>
+          <label className="block text-sm font-medium text-gray-700">Email</label>
+          <input
+            type="email"
+            placeholder="Your email"
+            className="w-full mt-2 p-3 border rounded-lg focus:ring-2 focus:ring-green-500"
+            required
+          />
+        </div>
 
-      <Link
-        href={`/jobs/${job.slug}/apply`}
-        className="inline-block px-6 py-3 bg-green-500 text-white font-semibold rounded-lg hover:bg-green-600"
-      >
-        Apply Now
-      </Link>
+        <div>
+          <label className="block text-sm font-medium text-gray-700">Resume (PDF)</label>
+          <input
+            type="file"
+            accept=".pdf"
+            className="w-full mt-2 p-3 border rounded-lg focus:ring-2 focus:ring-green-500"
+            required
+          />
+        </div>
+
+        <div>
+          <label className="block text-sm font-medium text-gray-700">Cover Letter</label>
+          <textarea
+            rows="4"
+            placeholder="Write your cover letter..."
+            className="w-full mt-2 p-3 border rounded-lg focus:ring-2 focus:ring-green-500"
+          />
+        </div>
+
+        <button
+          type="submit"
+          className="w-full bg-green-600 text-white py-3 rounded-lg font-semibold hover:bg-green-700 transition"
+        >
+          Submit Application
+        </button>
+      </form>
     </main>
   );
 }
