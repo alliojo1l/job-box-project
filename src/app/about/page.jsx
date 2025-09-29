@@ -8,15 +8,15 @@ export default function AboutPage() {
       }}
     >
       {/* Overlay */}
-      <div className="absolute inset-0 bg-white bg-opacity-90"></div>
+      <div className="absolute inset-0  bg-opacity-90"></div>
 
       {/* Content */}
       <div className="relative z-10 max-w-5xl mx-auto p-8 space-y-16">
         {/* Hero Section */}
         <section className="text-center">
-          <h1 className="text-4xl font-bold mb-4">About JBox</h1>
-          <p className="text-lg text-gray-700 max-w-2xl mx-auto">
-            Connecting job seekers with opportunities. Whether you’re just
+          <h1 className="text-white text-4xl font-bold mb-4">About JBox</h1>
+          <p className="text-lg text-white max-w-2xl mx-auto">
+            Connecting job seekers with opportunities. Whether you are just
             starting out or advancing your career, JBox makes job hunting easier
             and faster.
           </p>
@@ -69,7 +69,7 @@ export default function AboutPage() {
         </section>
 
         {/* Call to Action */}
-        <section className="text-center bg-green-600 text-white p-12 rounded-2xl shadow">
+        <section className="text-center  text-white p-12 rounded-2xl shadow">
           <h2 className="text-3xl font-bold mb-4">
             Ready to Find Your Next Job?
           </h2>

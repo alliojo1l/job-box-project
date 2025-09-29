@@ -3,11 +3,12 @@
 import Link from "next/link";
 import { usePathname } from "next/navigation";
 import { useState } from "react";
-import { Menu, X } from "lucide-react"; // icons for mobile
+import { Menu, X, Search } from "lucide-react";
 
 export default function Navbar() {
   const pathname = usePathname();
   const [isOpen, setIsOpen] = useState(false);
+  const [search, setSearch] = useState("");
 
   const links = [
     { href: "/", label: "Home" },
@@ -17,38 +18,64 @@ export default function Navbar() {
     { href: "/faq", label: "FAQ" },
   ];
 
+  const handleSearch = (e) => {
+    e.preventDefault();
+    if (search.trim()) {
+      window.location.href = `/jobs?search=${search}`;
+    }
+  };
+
   return (
     <nav className="bg-green-600 text-white sticky top-0 z-50 shadow-md">
       <div className="max-w-7xl mx-auto px-6 py-4 flex justify-between items-center">
         {/* Logo */}
-        <h1 className="text-2xl font-extrabold tracking-wide">
-          <span className="text-white">J</span>
-          <span className="text-yellow-300">-Box</span>
-        </h1>
+        <Link
+          href="/"
+          className="flex items-center gap-2 px-3 py-2 bg-green-400 rounded-lg shadow-md hover:bg-green-500 transition cursor-pointer"
+        >
+          <span className="text-white text-2xl font-extrabold">J</span>
+          <span className="text-white-500 text-2xl font-extrabold">-Box</span>
+        </Link>
 
-        {/* Desktop Links */}
-        <ul className="hidden md:flex space-x-8">
-          {links.map((link) => (
-            <li key={link.href}>
-              <Link
-                href={link.href}
-                className={`relative font-medium transition ${
-                  pathname === link.href
-                    ? "text-yellow-300"
-                    : "hover:text-yellow-300"
-                }`}
-              >
-                {link.label}
-                {/* underline animation */}
-                <span
-                  className={`absolute left-0 -bottom-1 h-0.5 w-full bg-yellow-300 transform origin-left scale-x-0 transition-transform duration-300 ${
-                    pathname === link.href ? "scale-x-100" : "group-hover:scale-x-100"
+        {/* Desktop Links + Search */}
+        <div className="hidden md:flex items-center space-x-6">
+          <ul className="flex space-x-6">
+            {links.map((link) => (
+              <li key={link.href}>
+                <Link
+                  href={link.href}
+                  className={`relative font-medium transition ${
+                    pathname === link.href
+                      ? "text-gray-300 after:content-[''] after:absolute after:-bottom-1 after:left-0 after:w-full after:h-[2px] after:bg-yellow-300"
+                      : "hover:text-yellow-300"
                   }`}
-                />
-              </Link>
-            </li>
-          ))}
-        </ul>
+                >
+                  {link.label}
+                </Link>
+              </li>
+            ))}
+          </ul>
+
+          {/* Search Bar */}
+          <form
+            onSubmit={handleSearch}
+            className="flex items-center bg-white rounded-lg overflow-hidden shadow-sm"
+          >
+            <input
+              type="text"
+              placeholder="Search jobs..."
+              value={search}
+              onChange={(e) => setSearch(e.target.value)}
+              className="px-3 py-1 text-sm text-gray-700 outline-none"
+            />
+            <button
+              type="submit"
+              className="bg-blue-300 px-3 py-2 text-green-800 hover:bg-blue-500 transition"
+            >
+              <Search size={20} />
+            </button>
+          </form>
+        </div>
 
         {/* Mobile Menu Button */}
         <button
@@ -70,7 +97,7 @@ export default function Navbar() {
                   onClick={() => setIsOpen(false)}
                   className={`block px-3 py-2 rounded-md ${
                     pathname === link.href
-                      ? "bg-yellow-300 text-green-800 font-semibold"
+                      ? "bg-blue-400 text-green-800 font-semibold"
                       : "hover:bg-green-500"
                   }`}
                 >
@@ -78,6 +105,26 @@ export default function Navbar() {
                 </Link>
               </li>
             ))}
+
+            {/* Mobile Search */}
+            <form
+              onSubmit={handleSearch}
+              className="flex items-center bg-white rounded-lg overflow-hidden shadow-sm mt-3"
+            >
+              <input
+                type="text"
+                placeholder="Search jobs..."
+                value={search}
+                onChange={(e) => setSearch(e.target.value)}
+                className="px-3 py-2 text-sm text-gray-700 outline-none w-full"
+              />
+              <button
+                type="submit"
+                className="bg-blue-400 px-3 py-2 text-green-800 hover:bg-blue-400 transition"
+              >
+                <Search size={18} />
+              </button>
+            </form>
           </ul>
         </div>
       )}

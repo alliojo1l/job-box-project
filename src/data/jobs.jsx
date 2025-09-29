@@ -8,7 +8,7 @@ export const categories = [
         title: "Frontend Developer", 
         slug: "frontend-developer", 
         shortDescription: "Work with React/Next.js to build beautiful UIs.", 
-        longDescription: "As a Frontend Developer, you’ll collaborate with designers and backend engineers to build fast, responsive, and user-friendly interfaces. Strong skills in JavaScript/TypeScript, React, and Next.js are required.", 
+        longDescription: "As a Frontend Developer, you'll collaborate with designers and backend engineers to build fast, responsive, and user-friendly interfaces. Strong skills in JavaScript/TypeScript, React, and Next.js are required.", 
         salary: "₦500k / month",
         location: "Lagos, Nigeria",
         type: "Full-Time"
@@ -18,7 +18,7 @@ export const categories = [
         title: "Backend Developer", 
         slug: "backend-developer", 
         shortDescription: "Build and maintain scalable APIs with Node.js.", 
-        longDescription: "You’ll work on creating reliable and secure APIs that power the platform. Experience with databases, authentication, and cloud services is required.", 
+        longDescription: "You'll work on creating reliable and secure APIs that power the platform. Experience with databases, authentication, and cloud services is required.", 
         salary: "₦450k / month",
         location: "Abuja, Nigeria",
         type: "Remote"
@@ -30,7 +30,7 @@ export const categories = [
         shortDescription: "Handle both frontend and backend tasks.", 
         longDescription: "As a Fullstack Developer, you will handle complete features end-to-end, from UI design implementation to backend logic and database integration.", 
         salary: "₦600k / month",
-        location: "Remote",
+        location: "Lekki, Lagos",
         type: "Contract"
       },
       { 
@@ -38,7 +38,7 @@ export const categories = [
         title: "UI/UX Designer", 
         slug: "ui-ux-designer", 
         shortDescription: "Design intuitive and modern user interfaces.", 
-        longDescription: "You’ll be responsible for creating wireframes, prototypes, and final UI designs. Knowledge of Figma/Adobe XD and user research is a plus.", 
+        longDescription: "You will be responsible for creating wireframes, prototypes, and final UI designs. Knowledge of Figma/Adobe XD and user research is a plus.", 
         salary: "₦400k / month",
         location: "Lagos, Nigeria",
         type: "Full-Time"
@@ -50,7 +50,7 @@ export const categories = [
         shortDescription: "Develop mobile apps for iOS and Android.", 
         longDescription: "Build and maintain cross-platform apps using React Native or Flutter. Must understand app deployment and integration with APIs.", 
         salary: "₦550k / month",
-        location: "Remote",
+        location: "Ikotun, Lagos",
         type: "Full-Time"
       },
       { 
@@ -58,7 +58,7 @@ export const categories = [
         title: "DevOps Engineer", 
         slug: "devops-engineer", 
         shortDescription: "Manage CI/CD pipelines and deployments.", 
-        longDescription: "You’ll be setting up infrastructure, managing cloud environments (AWS/Azure), and ensuring smooth software deployment cycles.", 
+        longDescription: "You will be setting up infrastructure, managing cloud environments (AWS/Azure), and ensuring smooth software deployment cycles.", 
         salary: "₦650k / month",
         location: "Abuja, Nigeria",
         type: "Full-Time"
@@ -80,7 +80,7 @@ export const categories = [
         shortDescription: "Protect systems from cyber threats and attacks.", 
         longDescription: "Monitor systems for breaches, implement security protocols, and ensure company compliance with security standards.", 
         salary: "₦600k / month",
-        location: "Remote",
+        location: "Yaba, Lagos",
         type: "Contract"
       },
       { 
@@ -98,7 +98,7 @@ export const categories = [
         title: "Software Tester", 
         slug: "software-tester", 
         shortDescription: "Test applications for bugs and performance.", 
-        longDescription: "You’ll create test cases, run automated/manual testing, and ensure software quality before releases.", 
+        longDescription: "You will create test cases, run automated/manual testing, and ensure software quality before releases.", 
         salary: "₦350k / month",
         location: "Port Harcourt, Nigeria",
         type: "Full-Time"

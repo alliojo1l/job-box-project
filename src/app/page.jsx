@@ -9,14 +9,27 @@ export default function Home() {
         style={{ backgroundImage: "url('/hero-bg.jpg')" }}
       >
         <main
-          className="p-8 min-h-screen bg-cover bg-center rounded-2xl"
+          className="p-8 min-h-screen bg-cover bg-center rounded-t-md"
           style={{
             backgroundImage:
               "url('https://cdn.pixabay.com/photo/2015/05/08/10/37/green-757879_1280.jpg')",
           }}
         >
-          <div className="bg-white bg-opacity-50 p-8 rounded-xl max-w-3xl mx-auto text-green-400">
-            <h1 className="text-8xl font-bold mb-12">Find Your Dream Job</h1>
+          
+        <div className=" text-white px-6 py-3 rounded-b-md font-bold ">
+          <h1 className="text-4xl font-bold mb-4">Find Your Dream Job</h1>
+          <p className="text-lg mb-6">
+            Find your dream job across multiple industries. Apply with just a
+            click!
+          </p>
+          <Link
+            href="/jobs"
+            className="bg-green-400 text-white px-6 py-3 rounded-lg font-bold hover:text-white hover:bg-green-700"
+          >
+            Browse All Jobs
+          </Link>
+        </div><div className="bg-white bg-opacity-50 p-8 rounded-xl max-w-3xl mx-auto text-green-400">
+            <h1 className="text-8xl font-bold mb-12">Welcome to JBox</h1>
             <p className="text-8x1 font-bold">
               Browse categories, explore opportunities, and take the next step
               in your career journey.
@@ -24,19 +37,6 @@ export default function Home() {
           </div>
         </main>
 
-        <div className="bg-green-200 text-green-600 px-6 py-3 rounded-lg font-bold ">
-          <h1 className="text-4xl font-bold mb-4">Welcome to JBox</h1>
-          <p className="text-lg mb-6">
-            Find your dream job across multiple industries. Apply with just a
-            click!
-          </p>
-          <Link
-            href="/jobs"
-            className="bg-green-200 text-white px-6 py-3 rounded-lg font-bold hover:text-white hover:bg-green-400"
-          >
-            Browse All Jobs
-          </Link>
-        </div>
       </section>
 
       <section className="bg-gray-100 rounded-2xl p-12 text-center shadow">
