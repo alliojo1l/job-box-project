@@ -26,12 +26,12 @@ export default function Navbar() {
   };
 
   return (
-    <nav className="bg-green-600 text-white sticky top-0 z-50 shadow-md">
+    <nav className="bg-gradient-to-br from-white to-green-500 text-white sticky top-0 z-50 shadow-md">
       <div className="max-w-7xl mx-auto px-6 py-4 flex justify-between items-center">
         {/* Logo */}
         <Link
           href="/"
-          className="flex items-center gap-2 px-3 py-2 bg-green-400 rounded-lg shadow-md hover:bg-green-500 transition cursor-pointer"
+          className="flex items-center gap-2 px-3 py-2 bg-gradient-to-br from-green-500 to-white  rounded-lg shadow-md  transition cursor-pointer"
         >
           <span className="text-white text-2xl font-extrabold">J</span>
           <span className="text-white-500 text-2xl font-extrabold">-Box</span>

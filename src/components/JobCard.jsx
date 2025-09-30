@@ -1,4 +1,3 @@
-// components/JobCard.jsx
 import Link from "next/link";
 
 export default function JobCard({ job }) {
@@ -7,7 +6,7 @@ export default function JobCard({ job }) {
       {/* Job Title as Clickable Link */}
       <Link 
         href={`/jobs/${job.slug}`} 
-        className="block text-lg font-semibold text-green-700 hover:underline hover:text-green-900 transition"
+        className="block text-lg font-semibold text-green-500 hover:underline hover:text-green-400 transition"
       >
         {job.title}
       </Link>
@@ -20,7 +19,7 @@ export default function JobCard({ job }) {
         href={`/jobs/${job.slug}`} 
         className="mt-3 inline-block text-white bg-green-600 px-3 py-2 rounded-md hover:bg-green-700 transition"
       >
-        View Details →
+        View Details
       </Link>
     </div>
   );

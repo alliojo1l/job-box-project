@@ -108,7 +108,7 @@ export default function JobsPage() {
             {currentJobs.map((job) => (
               <div
                 key={job.slug}
-                className="group block p-6 bg-gradient-to-br from-green-100 to-green-200 border rounded-2xl shadow-sm hover:shadow-lg hover:border-green-600 transition transform hover:-translate-y-1"
+                className="group block p-6 bg-gradient-to-br from-white to-green-200 border rounded-2xl shadow-sm hover:shadow-lg hover:border-green-400 transition transform hover:-translate-y-1"
               >
                 {/* Job Title & Company */}
                 <div className="flex items-center gap-4 mb-4">
@@ -119,7 +119,7 @@ export default function JobsPage() {
                     {/* Make job title clickable */}
                     <Link
                       href={`/jobs/${job.slug}`}
-                      className="text-xl font-semibold text-green-700 hover:underline hover:text-green-900 transition"
+                      className="text-xl font-semibold text-green-400 hover:underline hover:text-green-500 transition"
                     >
                       {job.title}
                     </Link>
