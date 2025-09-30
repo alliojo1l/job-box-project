@@ -108,11 +108,11 @@ export default function JobsPage() {
             {currentJobs.map((job) => (
               <div
                 key={job.slug}
-                className="group block p-6 bg-gradient-to-br from-white to-green-200 border rounded-2xl shadow-sm hover:shadow-lg hover:border-green-400 transition transform hover:-translate-y-1"
+                className="group block p-6 bg-gradient-to-br from-white to-green-400 border rounded-2xl shadow-sm hover:shadow-lg hover:border-green-400 transition transform hover:-translate-y-1"
               >
                 {/* Job Title & Company */}
                 <div className="flex items-center gap-4 mb-4">
-                  <div className="w-12 h-12 flex items-center justify-center rounded-full bg-orange-100 text-green-600 font-bold text-lg">
+                  <div className="w-12 h-12 flex items-center justify-center rounded-full bg-white text-green-600 font-bold text-lg">
                     {job.company?.[0] || "J"}
                   </div>
                   <div>
@@ -135,7 +135,7 @@ export default function JobsPage() {
                 {/* Meta Info */}
                 <div className="flex flex-wrap gap-3 text-sm mb-4">
                   {job.type && (
-                    <span className="px-3 py-1 bg-orange-100 text-orange-600 rounded-full font-medium">
+                    <span className="px-3 py-1 bg-yellow-100 text-orange-400 rounded-full font-medium">
                       {job.type}
                     </span>
                   )}

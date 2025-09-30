@@ -52,6 +52,7 @@ const faqs = [
     answer:
       "Yes, your privacy is important.",
   },
+  
 ];
 
 export default function FAQPage() {

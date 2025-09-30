@@ -67,7 +67,7 @@ export default function ApplyPage({ params }) {
 
           <button
             type="submit"
-            className="w-full bg-green-500 text-white py-3 rounded-lg hover:bg-green-600"
+            className="w-full bg-green-300 text-white py-3 rounded-lg hover:bg-green-600"
           >
             Submit Application
           </button>

@@ -21,7 +21,7 @@ export const categories = [
         longDescription: "You'll work on creating reliable and secure APIs that power the platform. Experience with databases, authentication, and cloud services is required.", 
         salary: "₦450k / month",
         location: "Abuja, Nigeria",
-        type: "Remote"
+        type: "Contract"
       },
       { 
         id: 3, 

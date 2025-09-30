@@ -17,7 +17,7 @@ export default function JobCard({ job }) {
       {/* View Details Button */}
       <Link 
         href={`/jobs/${job.slug}`} 
-        className="mt-3 inline-block text-white bg-green-600 px-3 py-2 rounded-md hover:bg-green-700 transition"
+        className="mt-3 inline-block text-white bg-green-300 px-3 py-2 rounded-md hover:bg-green-700 transition"
       >
         View Details
       </Link>
