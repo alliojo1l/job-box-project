@@ -6,9 +6,12 @@ export const categories = [
       { 
         id: 1, 
         title: "Frontend Developer", 
+        jobTitle: "Frontend Developer",
         slug: "frontend-developer", 
         shortDescription: "Work with React/Next.js to build beautiful UIs.", 
         longDescription: "As a Frontend Developer, you'll collaborate with designers and backend engineers to build fast, responsive, and user-friendly interfaces. Strong skills in JavaScript/TypeScript, React, and Next.js are required.", 
+        jobSummary: "Work with React/Next.js to build beautiful UIs.",
+        jobDescription: "As a Frontend Developer, you'll collaborate with designers and backend engineers to build fast, responsive, and user-friendly interfaces. Strong skills in JavaScript/TypeScript, React, and Next.js are required.",
         salary: "₦500k / month",
         location: "Lagos, Nigeria",
         type: "Full-Time"
@@ -16,9 +19,12 @@ export const categories = [
       { 
         id: 2, 
         title: "Backend Developer", 
+        jobTitle: "Backend Developer",
         slug: "backend-developer", 
         shortDescription: "Build and maintain scalable APIs with Node.js.", 
         longDescription: "You'll work on creating reliable and secure APIs that power the platform. Experience with databases, authentication, and cloud services is required.", 
+        jobSummary: "Build and maintain scalable APIs with Node.js.",
+        jobDescription: "You'll work on creating reliable and secure APIs that power the platform. Experience with databases, authentication, and cloud services is required.",
         salary: "₦450k / month",
         location: "Abuja, Nigeria",
         type: "Contract"
@@ -26,9 +32,12 @@ export const categories = [
       { 
         id: 3, 
         title: "Fullstack Developer", 
+        jobTitle: "Fullstack Developer",
         slug: "fullstack-developer", 
         shortDescription: "Handle both frontend and backend tasks.", 
         longDescription: "As a Fullstack Developer, you will handle complete features end-to-end, from UI design implementation to backend logic and database integration.", 
+        jobSummary: "Handle both frontend and backend tasks.",
+        jobDescription: "As a Fullstack Developer, you will handle complete features end-to-end, from UI design implementation to backend logic and database integration.",
         salary: "₦600k / month",
         location: "Lekki, Lagos",
         type: "Contract"
@@ -36,9 +45,12 @@ export const categories = [
       { 
         id: 4, 
         title: "UI/UX Designer", 
+        jobTitle: "UI/UX Designer",
         slug: "ui-ux-designer", 
         shortDescription: "Design intuitive and modern user interfaces.", 
         longDescription: "You will be responsible for creating wireframes, prototypes, and final UI designs. Knowledge of Figma/Adobe XD and user research is a plus.", 
+        jobSummary: "Design intuitive and modern user interfaces.",
+        jobDescription: "You will be responsible for creating wireframes, prototypes, and final UI designs. Knowledge of Figma/Adobe XD and user research is a plus.",
         salary: "₦400k / month",
         location: "Lagos, Nigeria",
         type: "Full-Time"
@@ -46,9 +58,12 @@ export const categories = [
       { 
         id: 5, 
         title: "Mobile App Developer", 
+        jobTitle: "Mobile App Developer",
         slug: "mobile-app-developer", 
         shortDescription: "Develop mobile apps for iOS and Android.", 
         longDescription: "Build and maintain cross-platform apps using React Native or Flutter. Must understand app deployment and integration with APIs.", 
+        jobSummary: "Develop mobile apps for iOS and Android.",
+        jobDescription: "Build and maintain cross-platform apps using React Native or Flutter. Must understand app deployment and integration with APIs.",
         salary: "₦550k / month",
         location: "Ikotun, Lagos",
         type: "Full-Time"
@@ -56,9 +71,12 @@ export const categories = [
       { 
         id: 6, 
         title: "DevOps Engineer", 
+        jobTitle: "DevOps Engineer",
         slug: "devops-engineer", 
         shortDescription: "Manage CI/CD pipelines and deployments.", 
         longDescription: "You will be setting up infrastructure, managing cloud environments (AWS/Azure), and ensuring smooth software deployment cycles.", 
+        jobSummary: "Manage CI/CD pipelines and deployments.",
+        jobDescription: "You will be setting up infrastructure, managing cloud environments (AWS/Azure), and ensuring smooth software deployment cycles.",
         salary: "₦650k / month",
         location: "Abuja, Nigeria",
         type: "Full-Time"
@@ -66,9 +84,12 @@ export const categories = [
       { 
         id: 7, 
         title: "Data Scientist", 
+        jobTitle: "Data Scientist",
         slug: "data-scientist", 
         shortDescription: "Analyze data to extract meaningful insights.", 
         longDescription: "Work with Python, R, and SQL to analyze large datasets. Experience with ML models and data visualization tools is essential.", 
+        jobSummary: "Analyze data to extract meaningful insights.",
+        jobDescription: "Work with Python, R, and SQL to analyze large datasets. Experience with ML models and data visualization tools is essential.",
         salary: "₦700k / month",
         location: "Lagos, Nigeria",
         type: "Full-Time"
@@ -76,9 +97,12 @@ export const categories = [
       { 
         id: 8, 
         title: "Cybersecurity Analyst", 
+        jobTitle: "Cybersecurity Analyst",
         slug: "cybersecurity-analyst", 
         shortDescription: "Protect systems from cyber threats and attacks.", 
         longDescription: "Monitor systems for breaches, implement security protocols, and ensure company compliance with security standards.", 
+        jobSummary: "Protect systems from cyber threats and attacks.",
+        jobDescription: "Monitor systems for breaches, implement security protocols, and ensure company compliance with security standards.",
         salary: "₦600k / month",
         location: "Yaba, Lagos",
         type: "Contract"
@@ -86,9 +110,12 @@ export const categories = [
       { 
         id: 9, 
         title: "AI Engineer", 
+        jobTitle: "AI Engineer",
         slug: "ai-engineer", 
         shortDescription: "Develop machine learning and AI models.", 
         longDescription: "Design, build, and deploy AI-powered applications. Strong understanding of TensorFlow, PyTorch, or similar frameworks is needed.", 
+        jobSummary: "Develop machine learning and AI models.",
+        jobDescription: "Design, build, and deploy AI-powered applications. Strong understanding of TensorFlow, PyTorch, or similar frameworks is needed.",
         salary: "₦800k / month",
         location: "Lagos, Nigeria",
         type: "Full-Time"
@@ -96,81 +123,560 @@ export const categories = [
       { 
         id: 10, 
         title: "Software Tester", 
+        jobTitle: "Software Tester",
         slug: "software-tester", 
         shortDescription: "Test applications for bugs and performance.", 
         longDescription: "You will create test cases, run automated/manual testing, and ensure software quality before releases.", 
+        jobSummary: "Test applications for bugs and performance.",
+        jobDescription: "You will create test cases, run automated/manual testing, and ensure software quality before releases.",
         salary: "₦350k / month",
         location: "Port Harcourt, Nigeria",
         type: "Full-Time"
       }
     ]
   },
-
   {
-    name: "Healthcare",
-    slug: "healthcare",
-    jobs: [
-      { id: 1, title: "Nurse", slug: "nurse", shortDescription: "Provide patient care and medical support.", longDescription: "Assist doctors, monitor patients, and ensure proper medical treatment is administered.", salary: "₦300k / month", location: "Abuja, Nigeria", type: "Full-Time" },
-      { id: 2, title: "Doctor", slug: "doctor", shortDescription: "Diagnose and treat patient illnesses.", longDescription: "Work in hospitals or private practice to provide healthcare solutions.", salary: "₦1m / month", location: "Lagos, Nigeria", type: "Full-Time" },
-      { id: 3, title: "Pharmacist", slug: "pharmacist", shortDescription: "Dispense medications and offer advice.", longDescription: "Ensure proper use of prescriptions and guide patients on medication safety.", salary: "₦400k / month", location: "Ibadan, Nigeria", type: "Full-Time" },
-      { id: 4, title: "Medical Lab Scientist", slug: "medical-lab-scientist", shortDescription: "Conduct medical tests and research.", longDescription: "Perform lab tests to aid diagnosis and treatment plans.", salary: "₦450k / month", location: "Lagos, Nigeria", type: "Full-Time" },
-      { id: 5, title: "Surgeon", slug: "surgeon", shortDescription: "Perform surgeries on patients.", longDescription: "Specialize in different surgery fields like orthopedics, neurology, or general surgery.", salary: "₦1.2m / month", location: "Abuja, Nigeria", type: "Full-Time" },
-      { id: 6, title: "Radiologist", slug: "radiologist", shortDescription: "Interpret scans like X-rays and MRIs.", longDescription: "Work with doctors to analyze medical images for accurate diagnoses.", salary: "₦700k / month", location: "Lagos, Nigeria", type: "Full-Time" },
-      { id: 7, title: "Physiotherapist", slug: "physiotherapist", shortDescription: "Help patients recover mobility.", longDescription: "Use physical therapy techniques to treat injury and aid rehabilitation.", salary: "₦350k / month", location: "Abuja, Nigeria", type: "Contract" },
-      { id: 8, title: "Dentist", slug: "dentist", shortDescription: "Provide dental treatments and care.", longDescription: "Diagnose and treat oral issues, perform surgeries, and guide on oral hygiene.", salary: "₦500k / month", location: "Port Harcourt, Nigeria", type: "Full-Time" },
-      { id: 9, title: "Psychologist", slug: "psychologist", shortDescription: "Offer mental health therapy and support.", longDescription: "Provide counseling, conduct research, and create treatment plans for patients.", salary: "₦450k / month", location: "Lagos, Nigeria", type: "Part-Time" },
-      { id: 10, title: "Midwife", slug: "midwife", shortDescription: "Assist women during childbirth.", longDescription: "Support mothers through pregnancy, delivery, and postnatal care.", salary: "₦300k / month", location: "Ibadan, Nigeria", type: "Full-Time" }
-    ]
-  },
-
-  {
-    name: "Education",
-    slug: "education",
-    jobs: [
-      { id: 1, title: "Teacher", slug: "teacher", shortDescription: "Teach students in primary/secondary schools.", longDescription: "Prepare lesson notes, manage classrooms, and evaluate students’ progress.", salary: "₦250k / month", location: "Lagos, Nigeria", type: "Full-Time" },
-      { id: 2, title: "Tutor", slug: "tutor", shortDescription: "Provide one-on-one private lessons.", longDescription: "Help students with subjects and exam preparation outside school.", salary: "₦150k / month", location: "Abuja, Nigeria", type: "Part-Time" },
-      { id: 3, title: "Lecturer", slug: "lecturer", shortDescription: "Teach and conduct research in universities.", longDescription: "Deliver lectures, mentor students, and publish academic papers.", salary: "₦400k / month", location: "Ibadan, Nigeria", type: "Full-Time" },
-      { id: 4, title: "Principal", slug: "principal", shortDescription: "Oversee and manage school operations.", longDescription: "Supervise teachers, enforce discipline, and run administrative tasks.", salary: "₦500k / month", location: "Port Harcourt, Nigeria", type: "Full-Time" },
-      { id: 5, title: "Counselor", slug: "counselor", shortDescription: "Provide academic and emotional guidance.", longDescription: "Help students make career decisions and offer mental support.", salary: "₦200k / month", location: "Lagos, Nigeria", type: "Part-Time" },
-      { id: 6, title: "Librarian", slug: "librarian", shortDescription: "Manage and organize learning resources.", longDescription: "Maintain library systems, assist students, and recommend resources.", salary: "₦180k / month", location: "Abuja, Nigeria", type: "Full-Time" },
-      { id: 7, title: "Research Assistant", slug: "research-assistant", shortDescription: "Support academic research projects.", longDescription: "Assist lecturers in conducting research, collecting data, and writing reports.", salary: "₦250k / month", location: "Ibadan, Nigeria", type: "Contract" },
-      { id: 8, title: "Special Education Teacher", slug: "special-education-teacher", shortDescription: "Teach students with disabilities.", longDescription: "Design special curriculums and adapt teaching methods for disabled students.", salary: "₦300k / month", location: "Abuja, Nigeria", type: "Full-Time" },
-      { id: 9, title: "Education Consultant", slug: "education-consultant", shortDescription: "Advise schools and institutions.", longDescription: "Offer guidance on improving curriculum, policies, and teaching methods.", salary: "₦400k / month", location: "Lagos, Nigeria", type: "Contract" },
-      { id: 10, title: "Exam Officer", slug: "exam-officer", shortDescription: "Organize and manage examinations.", longDescription: "Ensure fair and smooth running of exams while keeping accurate records.", salary: "₦220k / month", location: "Port Harcourt, Nigeria", type: "Full-Time" }
-    ]
-  },
-
-  {
-    name: "Business",
-    slug: "business",
-    jobs: [
-      { id: 1, title: "Accountant", slug: "accountant", shortDescription: "Manage financial records and reports.", longDescription: "Prepare balance sheets, financial statements, and ensure compliance.", salary: "₦350k / month", location: "Lagos, Nigeria", type: "Full-Time" },
-      { id: 2, title: "HR Manager", slug: "hr-manager", shortDescription: "Oversee recruitment and staff welfare.", longDescription: "Handle employee relations, hiring processes, and performance reviews.", salary: "₦500k / month", location: "Abuja, Nigeria", type: "Full-Time" },
-      { id: 3, title: "Business Analyst", slug: "business-analyst", shortDescription: "Analyze and improve business processes.", longDescription: "Collect business requirements, create reports, and optimize workflows.", salary: "₦400k / month", location: "Ibadan, Nigeria", type: "Contract" },
-      { id: 4, title: "Project Manager", slug: "project-manager", shortDescription: "Lead and manage business projects.", longDescription: "Plan, execute, and monitor projects to meet company objectives.", salary: "₦600k / month", location: "Lagos, Nigeria", type: "Full-Time" },
-      { id: 5, title: "Sales Executive", slug: "sales-executive", shortDescription: "Drive sales and revenue growth.", longDescription: "Engage clients, close deals, and achieve sales targets.", salary: "₦300k / month", location: "Abuja, Nigeria", type: "Full-Time" },
-      { id: 6, title: "Marketing Manager", slug: "marketing-manager", shortDescription: "Plan and execute marketing campaigns.", longDescription: "Develop marketing strategies and oversee digital campaigns.", salary: "₦500k / month", location: "Lagos, Nigeria", type: "Full-Time" },
-      { id: 7, title: "Customer Service Officer", slug: "customer-service-officer", shortDescription: "Assist customers and handle complaints.", longDescription: "Provide support via calls, emails, and in-person interactions.", salary: "₦200k / month", location: "Port Harcourt, Nigeria", type: "Full-Time" },
-      { id: 8, title: "Entrepreneur", slug: "entrepreneur", shortDescription: "Start and run your own business.", longDescription: "Develop business ideas, raise capital, and manage day-to-day operations.", salary: "Variable", location: "Nigeria", type: "Self-Employed" },
-      { id: 9, title: "Operations Manager", slug: "operations-manager", shortDescription: "Oversee daily company operations.", longDescription: "Ensure efficiency across different departments and optimize workflow.", salary: "₦550k / month", location: "Lagos, Nigeria", type: "Full-Time" },
-      { id: 10, title: "Procurement Officer", slug: "procurement-officer", shortDescription: "Manage purchasing and supplies.", longDescription: "Source vendors, negotiate prices, and track inventory.", salary: "₦300k / month", location: "Abuja, Nigeria", type: "Full-Time" }
-    ]
-  },
-
-  {
-    name: "Engineering",
-    slug: "engineering",
-    jobs: [
-      { id: 1, title: "Civil Engineer", slug: "civil-engineer", shortDescription: "Design and supervise construction projects.", longDescription: "Work on roads, bridges, and buildings ensuring structural safety.", salary: "₦600k / month", location: "Lagos, Nigeria", type: "Full-Time" },
-      { id: 2, title: "Mechanical Engineer", slug: "mechanical-engineer", shortDescription: "Work on machines and mechanical systems.", longDescription: "Design, test, and maintain mechanical devices and engines.", salary: "₦550k / month", location: "Abuja, Nigeria", type: "Full-Time" },
-      { id: 3, title: "Electrical Engineer", slug: "electrical-engineer", shortDescription: "Develop and maintain electrical systems.", longDescription: "Design power systems, wiring, and ensure safety compliance.", salary: "₦500k / month", location: "Ibadan, Nigeria", type: "Full-Time" },
-      { id: 4, title: "Chemical Engineer", slug: "chemical-engineer", shortDescription: "Develop processes involving chemicals.", longDescription: "Work on production of chemicals, fuels, and food industries.", salary: "₦700k / month", location: "Lagos, Nigeria", type: "Contract" },
-      { id: 5, title: "Structural Engineer", slug: "structural-engineer", shortDescription: "Ensure strength and stability of structures.", longDescription: "Analyze building designs and materials for durability.", salary: "₦650k / month", location: "Port Harcourt, Nigeria", type: "Full-Time" },
-      { id: 6, title: "Software Engineer", slug: "software-engineer", shortDescription: "Develop and maintain software solutions.", longDescription: "Write clean code, debug systems, and collaborate with teams.", salary: "₦600k / month", location: "Remote", type: "Full-Time" },
-      { id: 7, title: "Petroleum Engineer", slug: "petroleum-engineer", shortDescription: "Work on oil and gas extraction projects.", longDescription: "Design and develop methods for extracting oil and natural gas.", salary: "₦1m / month", location: "Warri, Nigeria", type: "Full-Time" },
-      { id: 8, title: "Mining Engineer", slug: "mining-engineer", shortDescription: "Develop mining methods and processes.", longDescription: "Plan and oversee mining operations for efficiency and safety.", salary: "₦800k / month", location: "Jos, Nigeria", type: "Contract" },
-      { id: 9, title: "Aerospace Engineer", slug: "aerospace-engineer", shortDescription: "Design and test aircraft and spacecraft.", longDescription: "Work on aerodynamics, propulsion, and system designs.", salary: "₦900k / month", location: "Abuja, Nigeria", type: "Full-Time" },
-      { id: 10, title: "Biomedical Engineer", slug: "biomedical-engineer", shortDescription: "Develop medical devices and equipment.", longDescription: "Combine biology with engineering to create healthcare innovations.", salary: "₦700k / month", location: "Lagos, Nigeria", type: "Full-Time" }
-    ]
-  }
-];
+  name: "Healthcare",
+  slug: "healthcare",
+  jobs: [
+    { 
+      id: 1, 
+      title: "Nurse", 
+      jobTitle: "Nurse",
+      slug: "nurse", 
+      shortDescription: "Provide patient care and medical support.", 
+      longDescription: "Assist doctors, monitor patients, and ensure proper medical treatment is administered.", 
+      jobSummary: "Provide patient care and medical support.",
+      jobDescription: "Assist doctors, monitor patients, and ensure proper medical treatment is administered.",
+      salary: "₦300k / month", 
+      location: "Abuja, Nigeria", 
+      type: "Full-Time" 
+    },
+    { 
+      id: 2, 
+      title: "Doctor", 
+      jobTitle: "Doctor",
+      slug: "doctor", 
+      shortDescription: "Diagnose and treat patient illnesses.", 
+      longDescription: "Work in hospitals or private practice to provide healthcare solutions.", 
+      jobSummary: "Diagnose and treat patient illnesses.",
+      jobDescription: "Work in hospitals or private practice to provide healthcare solutions.",
+      salary: "₦1m / month", 
+      location: "Lagos, Nigeria", 
+      type: "Full-Time" 
+    },
+    { 
+      id: 3, 
+      title: "Pharmacist", 
+      jobTitle: "Pharmacist",
+      slug: "pharmacist", 
+      shortDescription: "Dispense medications and offer advice.", 
+      longDescription: "Ensure proper use of prescriptions and guide patients on medication safety.", 
+      jobSummary: "Dispense medications and offer advice.",
+      jobDescription: "Ensure proper use of prescriptions and guide patients on medication safety.",
+      salary: "₦400k / month", 
+      location: "Ibadan, Nigeria", 
+      type: "Full-Time" 
+    },
+    { 
+      id: 4, 
+      title: "Medical Lab Scientist", 
+      jobTitle: "Medical Lab Scientist",
+      slug: "medical-lab-scientist", 
+      shortDescription: "Conduct medical tests and research.", 
+      longDescription: "Perform lab tests to aid diagnosis and treatment plans.", 
+      jobSummary: "Conduct medical tests and research.",
+      jobDescription: "Perform lab tests to aid diagnosis and treatment plans.",
+      salary: "₦450k / month", 
+      location: "Lagos, Nigeria", 
+      type: "Full-Time" 
+    },
+    { 
+      id: 5, 
+      title: "Surgeon", 
+      jobTitle: "Surgeon",
+      slug: "surgeon", 
+      shortDescription: "Perform surgeries on patients.", 
+      longDescription: "Specialize in different surgery fields like orthopedics, neurology, or general surgery.", 
+      jobSummary: "Perform surgeries on patients.",
+      jobDescription: "Specialize in different surgery fields like orthopedics, neurology, or general surgery.",
+      salary: "₦1.2m / month", 
+      location: "Abuja, Nigeria", 
+      type: "Full-Time" 
+    },
+    { 
+      id: 6, 
+      title: "Radiologist", 
+      jobTitle: "Radiologist",
+      slug: "radiologist", 
+      shortDescription: "Interpret scans like X-rays and MRIs.", 
+      longDescription: "Work with doctors to analyze medical images for accurate diagnoses.", 
+      jobSummary: "Interpret scans like X-rays and MRIs.",
+      jobDescription: "Work with doctors to analyze medical images for accurate diagnoses.",
+      salary: "₦700k / month", 
+      location: "Lagos, Nigeria", 
+      type: "Full-Time" 
+    },
+    { 
+      id: 7, 
+      title: "Physiotherapist", 
+      jobTitle: "Physiotherapist",
+      slug: "physiotherapist", 
+      shortDescription: "Help patients recover mobility.", 
+      longDescription: "Use physical therapy techniques to treat injury and aid rehabilitation.", 
+      jobSummary: "Help patients recover mobility.",
+      jobDescription: "Use physical therapy techniques to treat injury and aid rehabilitation.",
+      salary: "₦350k / month", 
+      location: "Abuja, Nigeria", 
+      type: "Contract" 
+    },
+    { 
+      id: 8, 
+      title: "Dentist", 
+      jobTitle: "Dentist",
+      slug: "dentist", 
+      shortDescription: "Provide dental treatments and care.", 
+      longDescription: "Diagnose and treat oral issues, perform surgeries, and guide on oral hygiene.", 
+      jobSummary: "Provide dental treatments and care.",
+      jobDescription: "Diagnose and treat oral issues, perform surgeries, and guide on oral hygiene.",
+      salary: "₦500k / month", 
+      location: "Port Harcourt, Nigeria", 
+      type: "Full-Time" 
+    },
+    { 
+      id: 9, 
+      title: "Psychologist", 
+      jobTitle: "Psychologist",
+      slug: "psychologist", 
+      shortDescription: "Offer mental health therapy and support.", 
+      longDescription: "Provide counseling, conduct research, and create treatment plans for patients.", 
+      jobSummary: "Offer mental health therapy and support.",
+      jobDescription: "Provide counseling, conduct research, and create treatment plans for patients.",
+      salary: "₦450k / month", 
+      location: "Lagos, Nigeria", 
+      type: "Part-Time" 
+    },
+    { 
+      id: 10, 
+      title: "Midwife", 
+      jobTitle: "Midwife",
+      slug: "midwife", 
+      shortDescription: "Assist women during childbirth.", 
+      longDescription: "Support mothers through pregnancy, delivery, and postnatal care.", 
+      jobSummary: "Assist women during childbirth.",
+      jobDescription: "Support mothers through pregnancy, delivery, and postnatal care.",
+      salary: "₦300k / month", 
+      location: "Ibadan, Nigeria", 
+      type: "Full-Time" 
+    }
+  ]
+},
+{
+  name: "Education",
+  slug: "education",
+  jobs: [
+    { 
+      id: 1, 
+      title: "Teacher", 
+      jobTitle: "Teacher",
+      slug: "teacher", 
+      shortDescription: "Teach students in primary or secondary school.", 
+      longDescription: "Prepare lesson plans, deliver lectures, and evaluate student performance.", 
+      jobSummary: "Teach students in primary or secondary school.",
+      jobDescription: "Prepare lesson plans, deliver lectures, and evaluate student performance.",
+      salary: "₦250k / month", 
+      location: "Lagos, Nigeria", 
+      type: "Full-Time" 
+    },
+    { 
+      id: 2, 
+      title: "Lecturer", 
+      jobTitle: "Lecturer",
+      slug: "lecturer", 
+      shortDescription: "Deliver lectures in higher institutions.", 
+      longDescription: "Engage in teaching, research, and academic guidance in universities and colleges.", 
+      jobSummary: "Deliver lectures in higher institutions.",
+      jobDescription: "Engage in teaching, research, and academic guidance in universities and colleges.",
+      salary: "₦400k / month", 
+      location: "Abuja, Nigeria", 
+      type: "Full-Time" 
+    },
+    { 
+      id: 3, 
+      title: "Tutor", 
+      jobTitle: "Tutor",
+      slug: "tutor", 
+      shortDescription: "Offer private or group lessons.", 
+      longDescription: "Provide academic support to students outside of traditional classrooms.", 
+      jobSummary: "Offer private or group lessons.",
+      jobDescription: "Provide academic support to students outside of traditional classrooms.",
+      salary: "₦150k / month", 
+      location: "Ibadan, Nigeria", 
+      type: "Part-Time" 
+    },
+    { 
+      id: 4, 
+      title: "School Administrator", 
+      jobTitle: "School Administrator",
+      slug: "school-administrator", 
+      shortDescription: "Manage school operations and staff.", 
+      longDescription: "Oversee admissions, budgets, teacher coordination, and overall academic performance.", 
+      jobSummary: "Manage school operations and staff.",
+      jobDescription: "Oversee admissions, budgets, teacher coordination, and overall academic performance.",
+      salary: "₦350k / month", 
+      location: "Lagos, Nigeria", 
+      type: "Full-Time" 
+    },
+    { 
+      id: 5, 
+      title: "Guidance Counselor", 
+      jobTitle: "Guidance Counselor",
+      slug: "guidance-counselor", 
+      shortDescription: "Support students in career and personal growth.", 
+      longDescription: "Help students with academic, emotional, and social development needs.", 
+      jobSummary: "Support students in career and personal growth.",
+      jobDescription: "Help students with academic, emotional, and social development needs.",
+      salary: "₦200k / month", 
+      location: "Kano, Nigeria", 
+      type: "Full-Time" 
+    },
+    { 
+      id: 6, 
+      title: "Librarian", 
+      jobTitle: "Librarian",
+      slug: "librarian", 
+      shortDescription: "Manage books and learning resources.", 
+      longDescription: "Organize library materials, help students with research, and manage reading programs.", 
+      jobSummary: "Manage books and learning resources.",
+      jobDescription: "Organize library materials, help students with research, and manage reading programs.",
+      salary: "₦180k / month", 
+      location: "Enugu, Nigeria", 
+      type: "Full-Time" 
+    },
+    { 
+      id: 7, 
+      title: "Education Consultant", 
+      jobTitle: "Education Consultant",
+      slug: "education-consultant", 
+      shortDescription: "Advise schools and students on education plans.", 
+      longDescription: "Guide on curriculum development, exam preparation, and career advice.", 
+      jobSummary: "Advise schools and students on education plans.",
+      jobDescription: "Guide on curriculum development, exam preparation, and career advice.",
+      salary: "₦300k / month", 
+      location: "Lagos, Nigeria", 
+      type: "Contract" 
+    },
+    { 
+      id: 8, 
+      title: "Researcher", 
+      jobTitle: "Researcher",
+      slug: "researcher", 
+      shortDescription: "Conduct academic and field research.", 
+      longDescription: "Work in institutions or independently to publish findings and support education.", 
+      jobSummary: "Conduct academic and field research.",
+      jobDescription: "Work in institutions or independently to publish findings and support education.",
+      salary: "₦500k / month", 
+      location: "Abuja, Nigeria", 
+      type: "Full-Time" 
+    },
+    { 
+      id: 9, 
+      title: "Head Teacher", 
+      jobTitle: "Head Teacher",
+      slug: "head-teacher", 
+      shortDescription: "Lead a primary or secondary school.", 
+      longDescription: "Supervise teachers, implement curriculum, and ensure student performance improves.", 
+      jobSummary: "Lead a primary or secondary school.",
+      jobDescription: "Supervise teachers, implement curriculum, and ensure student performance improves.",
+      salary: "₦400k / month", 
+      location: "Port Harcourt, Nigeria", 
+      type: "Full-Time" 
+    },
+    { 
+      id: 10, 
+      title: "Special Education Teacher", 
+      jobTitle: "Special Education Teacher",
+      slug: "special-education-teacher", 
+      shortDescription: "Teach children with special needs.", 
+      longDescription: "Provide personalized teaching and support to children with learning disabilities.", 
+      jobSummary: "Teach children with special needs.",
+      jobDescription: "Provide personalized teaching and support to children with learning disabilities.",
+      salary: "₦280k / month", 
+      location: "Abuja, Nigeria", 
+      type: "Full-Time" 
+    }
+  ]
+},
+{
+  name: "Business",
+  slug: "business",
+  jobs: [
+    { 
+      id: 1, 
+      title: "Business Analyst", 
+      jobTitle: "Business Analyst",
+      slug: "business-analyst", 
+      shortDescription: "Analyze business needs and propose solutions.", 
+      longDescription: "Work with stakeholders to gather requirements, analyze data, and recommend strategies to improve business processes.", 
+      jobSummary: "Analyze business needs and propose solutions.",
+      jobDescription: "Work with stakeholders to gather requirements, analyze data, and recommend strategies to improve business processes.",
+      salary: "₦400k / month", 
+      location: "Lagos, Nigeria", 
+      type: "Full-Time" 
+    },
+    { 
+      id: 2, 
+      title: "Accountant", 
+      jobTitle: "Accountant",
+      slug: "accountant", 
+      shortDescription: "Manage financial records and accounts.", 
+      longDescription: "Prepare financial statements, manage budgets, and ensure compliance with tax regulations.", 
+      jobSummary: "Manage financial records and accounts.",
+      jobDescription: "Prepare financial statements, manage budgets, and ensure compliance with tax regulations.",
+      salary: "₦350k / month", 
+      location: "Abuja, Nigeria", 
+      type: "Full-Time" 
+    },
+    { 
+      id: 3, 
+      title: "Project Manager", 
+      jobTitle: "Project Manager",
+      slug: "project-manager", 
+      shortDescription: "Oversee and manage business projects.", 
+      longDescription: "Plan, execute, and monitor projects while ensuring they are completed on time and within budget.", 
+      jobSummary: "Oversee and manage business projects.",
+      jobDescription: "Plan, execute, and monitor projects while ensuring they are completed on time and within budget.",
+      salary: "₦500k / month", 
+      location: "Lagos, Nigeria", 
+      type: "Contract" 
+    },
+    { 
+      id: 4, 
+      title: "Sales Executive", 
+      jobTitle: "Sales Executive",
+      slug: "sales-executive", 
+      shortDescription: "Drive product and service sales.", 
+      longDescription: "Identify new customers, maintain relationships with existing clients, and achieve sales targets.", 
+      jobSummary: "Drive product and service sales.",
+      jobDescription: "Identify new customers, maintain relationships with existing clients, and achieve sales targets.",
+      salary: "₦300k / month", 
+      location: "Ibadan, Nigeria", 
+      type: "Full-Time" 
+    },
+    { 
+      id: 5, 
+      title: "Human Resource Manager", 
+      jobTitle: "Human Resource Manager",
+      slug: "human-resource-manager", 
+      shortDescription: "Manage staff recruitment and welfare.", 
+      longDescription: "Handle employee relations, recruitment, training, and ensure compliance with labor laws.", 
+      jobSummary: "Manage staff recruitment and welfare.",
+      jobDescription: "Handle employee relations, recruitment, training, and ensure compliance with labor laws.",
+      salary: "₦450k / month", 
+      location: "Port Harcourt, Nigeria", 
+      type: "Full-Time" 
+    },
+    { 
+      id: 6, 
+      title: "Marketing Specialist", 
+      jobTitle: "Marketing Specialist",
+      slug: "marketing-specialist", 
+      shortDescription: "Create and execute marketing campaigns.", 
+      longDescription: "Develop marketing strategies, manage social media campaigns, and analyze performance metrics.", 
+      jobSummary: "Create and execute marketing campaigns.",
+      jobDescription: "Develop marketing strategies, manage social media campaigns, and analyze performance metrics.",
+      salary: "₦380k / month", 
+      location: "Lagos, Nigeria", 
+      type: "Full-Time" 
+    },
+    { 
+      id: 7, 
+      title: "Customer Service Officer", 
+      jobTitle: "Customer Service Officer",
+      slug: "customer-service-officer", 
+      shortDescription: "Assist customers and resolve complaints.", 
+      longDescription: "Handle customer inquiries, resolve issues, and ensure customer satisfaction.", 
+      jobSummary: "Assist customers and resolve complaints.",
+      jobDescription: "Handle customer inquiries, resolve issues, and ensure customer satisfaction.",
+      salary: "₦200k / month", 
+      location: "Abuja, Nigeria", 
+      type: "Full-Time" 
+    },
+    { 
+      id: 8, 
+      title: "Entrepreneur", 
+      jobTitle: "Entrepreneur",
+      slug: "entrepreneur", 
+      shortDescription: "Start and manage a business venture.", 
+      longDescription: "Identify opportunities, raise funds, manage operations, and grow a successful business.", 
+      jobSummary: "Start and manage a business venture.",
+      jobDescription: "Identify opportunities, raise funds, manage operations, and grow a successful business.",
+      salary: "Variable", 
+      location: "Nationwide, Nigeria", 
+      type: "Self-Employed" 
+    },
+    { 
+      id: 9, 
+      title: "Financial Analyst", 
+      jobTitle: "Financial Analyst",
+      slug: "financial-analyst", 
+      shortDescription: "Analyze financial data for decision-making.", 
+      longDescription: "Evaluate investment opportunities, analyze trends, and create financial models.", 
+      jobSummary: "Analyze financial data for decision-making.",
+      jobDescription: "Evaluate investment opportunities, analyze trends, and create financial models.",
+      salary: "₦420k / month", 
+      location: "Lagos, Nigeria", 
+      type: "Full-Time" 
+    },
+    { 
+      id: 10, 
+      title: "Consultant", 
+      jobTitle: "Consultant",
+      slug: "consultant", 
+      shortDescription: "Provide expert advice to businesses.", 
+      longDescription: "Advise organizations on strategy, operations, and growth opportunities.", 
+      jobSummary: "Provide expert advice to businesses.",
+      jobDescription: "Advise organizations on strategy, operations, and growth opportunities.",
+      salary: "₦600k / month", 
+      location: "Abuja, Nigeria", 
+      type: "Contract" 
+    }
+  ]
+},
+{
+  name: "Engineering",
+  slug: "engineering",
+  jobs: [
+    { 
+      id: 1, 
+      title: "Civil Engineer", 
+      jobTitle: "Civil Engineer",
+      slug: "civil-engineer", 
+      shortDescription: "Design and oversee construction projects.", 
+      longDescription: "Plan, design, and supervise infrastructure projects such as roads, bridges, and buildings.", 
+      jobSummary: "Design and oversee construction projects.",
+      jobDescription: "Plan, design, and supervise infrastructure projects such as roads, bridges, and buildings.",
+      salary: "₦500k / month", 
+      location: "Lagos, Nigeria", 
+      type: "Full-Time" 
+    },
+    { 
+      id: 2, 
+      title: "Mechanical Engineer", 
+      jobTitle: "Mechanical Engineer",
+      slug: "mechanical-engineer", 
+      shortDescription: "Design and maintain mechanical systems.", 
+      longDescription: "Work on machines, engines, and manufacturing equipment to ensure efficiency and reliability.", 
+      jobSummary: "Design and maintain mechanical systems.",
+      jobDescription: "Work on machines, engines, and manufacturing equipment to ensure efficiency and reliability.",
+      salary: "₦480k / month", 
+      location: "Abuja, Nigeria", 
+      type: "Full-Time" 
+    },
+    { 
+      id: 3, 
+      title: "Electrical Engineer", 
+      jobTitle: "Electrical Engineer",
+      slug: "electrical-engineer", 
+      shortDescription: "Work with electrical systems and power supply.", 
+      longDescription: "Design, develop, and maintain electrical equipment, power generation, and distribution systems.", 
+      jobSummary: "Work with electrical systems and power supply.",
+      jobDescription: "Design, develop, and maintain electrical equipment, power generation, and distribution systems.",
+      salary: "₦470k / month", 
+      location: "Port Harcourt, Nigeria", 
+      type: "Contract" 
+    },
+    { 
+      id: 4, 
+      title: "Chemical Engineer", 
+      jobTitle: "Chemical Engineer",
+      slug: "chemical-engineer", 
+      shortDescription: "Develop processes for chemical production.", 
+      longDescription: "Design and optimize processes for producing fuels, pharmaceuticals, food, and chemicals.", 
+      jobSummary: "Develop processes for chemical production.",
+      jobDescription: "Design and optimize processes for producing fuels, pharmaceuticals, food, and chemicals.",
+      salary: "₦550k / month", 
+      location: "Ibadan, Nigeria", 
+      type: "Full-Time" 
+    },
+    { 
+      id: 5, 
+      title: "Petroleum Engineer", 
+      jobTitle: "Petroleum Engineer",
+      slug: "petroleum-engineer", 
+      shortDescription: "Develop methods for extracting oil and gas.", 
+      longDescription: "Design drilling plans, optimize production, and manage oil and gas field operations.", 
+      jobSummary: "Develop methods for extracting oil and gas.",
+      jobDescription: "Design drilling plans, optimize production, and manage oil and gas field operations.",
+      salary: "₦650k / month", 
+      location: "Warri, Nigeria", 
+      type: "Full-Time" 
+    },
+    { 
+      id: 6, 
+      title: "Aerospace Engineer", 
+      jobTitle: "Aerospace Engineer",
+      slug: "aerospace-engineer", 
+      shortDescription: "Design aircraft and spacecraft systems.", 
+      longDescription: "Work on the development of airplanes, satellites, and rockets, ensuring safety and performance.", 
+      jobSummary: "Design aircraft and spacecraft systems.",
+      jobDescription: "Work on the development of airplanes, satellites, and rockets, ensuring safety and performance.",
+      salary: "₦700k / month", 
+      location: "Lagos, Nigeria", 
+      type: "Contract" 
+    },
+    { 
+      id: 7, 
+      title: "Environmental Engineer", 
+      jobTitle: "Environmental Engineer",
+      slug: "environmental-engineer", 
+      shortDescription: "Develop solutions to environmental problems.", 
+      longDescription: "Design systems for waste management, pollution control, and sustainable development.", 
+      jobSummary: "Develop solutions to environmental problems.",
+      jobDescription: "Design systems for waste management, pollution control, and sustainable development.",
+      salary: "₦420k / month", 
+      location: "Abuja, Nigeria", 
+      type: "Full-Time" 
+    },
+    { 
+      id: 8, 
+      title: "Structural Engineer", 
+      jobTitle: "Structural Engineer",
+      slug: "structural-engineer", 
+      shortDescription: "Design safe and durable structures.", 
+      longDescription: "Ensure buildings, bridges, and other structures are strong, stable, and meet safety codes.", 
+      jobSummary: "Design safe and durable structures.",
+      jobDescription: "Ensure buildings, bridges, and other structures are strong, stable, and meet safety codes.",
+      salary: "₦500k / month", 
+      location: "Lagos, Nigeria", 
+      type: "Full-Time" 
+    },
+    { 
+      id: 9, 
+      title: "Mining Engineer", 
+      jobTitle: "Mining Engineer",
+      slug: "mining-engineer", 
+      shortDescription: "Plan and manage mineral extraction.", 
+      longDescription: "Design safe and efficient methods for mining resources such as coal, gold, and other minerals.", 
+      jobSummary: "Plan and manage mineral extraction.",
+      jobDescription: "Design safe and efficient methods for mining resources such as coal, gold, and other minerals.",
+      salary: "₦550k / month", 
+      location: "Jos, Nigeria", 
+      type: "Contract" 
+    },
+    { 
+      id: 10, 
+      title: "Industrial Engineer", 
+      jobTitle: "Industrial Engineer",
+      slug: "industrial-engineer", 
+      shortDescription: "Optimize production and manufacturing systems.", 
+      longDescription: "Develop strategies to improve efficiency, reduce costs, and enhance product quality in factories.", 
+      jobSummary: "Optimize production and manufacturing systems.",
+      jobDescription: "Develop strategies to improve efficiency, reduce costs, and enhance product quality in factories.",
+      salary: "₦470k / month", 
+      location: "Lagos, Nigeria", 
+      type: "Full-Time" 
+    }
+  ]
+}
+]

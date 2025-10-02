@@ -46,7 +46,7 @@ export default function Navbar() {
                   href={link.href}
                   className={`relative font-medium transition ${
                     pathname === link.href
-                      ? "text-gray-300 after:content-[''] after:absolute after:-bottom-1 after:left-0 after:w-full after:h-[2px] after:bg-yellow-300"
+                      ? "text-white after:content-[''] after:absolute after:-bottom-1 after:left-0 after:w-full after:h-[2px] after:bg-yellow-300"
                       : "hover:text-yellow-300"
                   }`}
                 >

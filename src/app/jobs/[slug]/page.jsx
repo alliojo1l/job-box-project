@@ -1,64 +1,52 @@
-"use client";
-import { useParams } from "next/navigation";
 import { categories } from "@/data/jobs";
+import Link from "next/link";
 
-export default function ApplyPage() {
-  const { slug } = useParams();
-  const job = categories.flatMap(c => c.jobs).find(j => j.slug === slug);
+export default async function JobDetailsPage({ params }) {
+  const { slug } = await params;
 
-  if (!job) return <p className="p-8">Job not found.</p>;
+  // Find job inside all categories
+  const job = categories
+    .flatMap((cat) => cat.jobs)
+    .find((job) => job.slug === slug);
+
+  if (!job) {
+    return <h1 className="p-6 text-2xl">Job not found</h1>;
+  }
 
   return (
-    <main className="p-8 max-w-2xl mx-auto">
-      <h1 className="text-2xl font-bold mb-6">Apply for {job.title}</h1>
+    <div className="p-6 max-w-2xl mx-auto">
+      {/* Back Button */}
+      <Link
+        href="/jobs"
+        className="inline-block mb-4 text-blue-600 hover:underline"
+      >
+        ← Back to Jobs
+      </Link>
 
-      <form className="space-y-6 bg-white p-6 rounded-xl shadow">
-        <div>
-          <label className="block text-sm font-medium text-gray-700">Full Name</label>
-          <input
-            type="text"
-            placeholder="Your full name"
-            className="w-full mt-2 p-3 border rounded-lg focus:ring-2 focus:ring-green-500"
-            required
-          />
-        </div>
+      <h1 className="text-3xl font-bold">{job.title}</h1>
+      <p className="text-gray-500 mt-2">{job.jobSummary}</p>
 
-        <div>
-          <label className="block text-sm font-medium text-gray-700">Email</label>
-          <input
-            type="email"
-            placeholder="Your email"
-            className="w-full mt-2 p-3 border rounded-lg focus:ring-2 focus:ring-green-500"
-            required
-          />
-        </div>
+      {/* Example: show other details if available */}
+      {job.location && (
+        <p className="mt-2">
+          <strong>Location:</strong> {job.location}
+        </p>
+      )}
+      {job.salary && (
+        <p className="mt-1">
+          <strong>Salary:</strong> {job.salary}
+        </p>
+      )}
 
-        <div>
-          <label className="block text-sm font-medium text-gray-700">Resume (PDF)</label>
-          <input
-            type="file"
-            accept=".pdf"
-            className="w-full mt-2 p-3 border rounded-lg focus:ring-2 focus:ring-green-500"
-            required
-          />
-        </div>
-
-        <div>
-          <label className="block text-sm font-medium text-gray-700">Cover Letter</label>
-          <textarea
-            rows="4"
-            placeholder="Write your cover letter..."
-            className="w-full mt-2 p-3 border rounded-lg focus:ring-2 focus:ring-green-500"
-          />
-        </div>
-
-        <button
-          type="submit"
-          className="w-full bg-green-600 text-white py-3 rounded-lg font-semibold hover:bg-green-700 transition"
+      {/* Apply Button that navigates to apply page */}
+      <div className="mt-6">
+        <Link
+          href={`/jobs/${slug}/apply`}
+          className="inline-block bg-green-300 text-white px-6 py-2 rounded-lg hover:bg-green-500 transition"
         >
-          Submit Application
-        </button>
-      </form>
-    </main>
+          Apply Now
+        </Link>
+      </div>
+    </div>
   );
 }
