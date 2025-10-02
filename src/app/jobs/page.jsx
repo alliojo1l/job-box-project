@@ -16,7 +16,7 @@ export default function JobsPage() {
     setCurrentPage(1);
   }, [categorySlug, searchQuery]);
 
-  //  Build jobs list
+  // Build jobs list
   let jobs = [];
   if (categorySlug) {
     const category = categories.find((c) => c.slug === categorySlug);
@@ -29,18 +29,19 @@ export default function JobsPage() {
     );
   }
 
-  // 🔍 Apply search filter
+  // 🔍 Apply search filter (now includes category name too!)
   if (searchQuery) {
     jobs = jobs.filter(
       (job) =>
         job.title.toLowerCase().includes(searchQuery) ||
         job.company?.toLowerCase().includes(searchQuery) ||
         job.shortDescription?.toLowerCase().includes(searchQuery) ||
-        job.location?.toLowerCase().includes(searchQuery)
+        job.location?.toLowerCase().includes(searchQuery) ||
+        job.category?.toLowerCase().includes(searchQuery) // ✅ category match
     );
   }
 
-  //  Pagination
+  // Pagination
   const jobsPerPage = 10;
   const totalPages = Math.ceil(jobs.length / jobsPerPage);
 
@@ -55,7 +56,7 @@ export default function JobsPage() {
     }
   };
 
-  //  Handle category filter click
+  // Handle category filter click (buttons or dropdown)
   const handleCategoryChange = (slug) => {
     const params = new URLSearchParams(searchParams);
     if (slug) {
@@ -70,7 +71,7 @@ export default function JobsPage() {
     <main className="p-8">
       <h1 className="text-3xl font-bold mb-6">Jobs</h1>
 
-      {/*  Category Filter Buttons */}
+      {/* Category Filter Buttons */}
       <div className="flex flex-wrap gap-3 mb-8">
         <button
           onClick={() => handleCategoryChange("")}
@@ -116,7 +117,6 @@ export default function JobsPage() {
                     {job.company?.[0] || "J"}
                   </div>
                   <div>
-                    {/* Make job title clickable */}
                     <Link
                       href={`/jobs/${job.slug}`}
                       className="text-xl font-semibold text-green-400 hover:underline hover:text-green-500 transition"

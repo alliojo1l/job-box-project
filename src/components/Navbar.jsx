@@ -1,14 +1,17 @@
 "use client";
 
 import Link from "next/link";
-import { usePathname } from "next/navigation";
+import { usePathname, useRouter } from "next/navigation";
 import { useState } from "react";
 import { Menu, X, Search } from "lucide-react";
+import { categories } from "@/data/jobs"; // ✅ import categories
 
 export default function Navbar() {
   const pathname = usePathname();
+  const router = useRouter();
   const [isOpen, setIsOpen] = useState(false);
   const [search, setSearch] = useState("");
+  const [selectedCategory, setSelectedCategory] = useState("");
 
   const links = [
     { href: "/", label: "Home" },
@@ -20,9 +23,12 @@ export default function Navbar() {
 
   const handleSearch = (e) => {
     e.preventDefault();
-    if (search.trim()) {
-      window.location.href = `/jobs?search=${search}`;
-    }
+
+    const params = new URLSearchParams();
+    if (search.trim()) params.set("search", search);
+    if (selectedCategory) params.set("category", selectedCategory);
+
+    router.push(`/jobs?${params.toString()}`);
   };
 
   return (
@@ -31,7 +37,7 @@ export default function Navbar() {
         {/* Logo */}
         <Link
           href="/"
-          className="flex items-center gap-2 px-3 py-2 bg-gradient-to-br from-green-500 to-white  rounded-lg shadow-md  transition cursor-pointer"
+          className="flex items-center gap-2 px-3 py-2 bg-gradient-to-br from-green-500 to-white rounded-lg shadow-md transition cursor-pointer"
         >
           <span className="text-white text-2xl font-extrabold">J</span>
           <span className="text-white-500 text-2xl font-extrabold">-Box</span>
@@ -56,11 +62,26 @@ export default function Navbar() {
             ))}
           </ul>
 
-          {/* Search Bar */}
+          {/* Search Bar with Category */}
           <form
             onSubmit={handleSearch}
             className="flex items-center bg-white rounded-lg overflow-hidden shadow-sm"
           >
+            {/* Category Dropdown */}
+            <select
+              value={selectedCategory}
+              onChange={(e) => setSelectedCategory(e.target.value)}
+              className="px-2 py-1 text-sm text-gray-700 outline-none border-r"
+            >
+              <option value="">All Categories</option>
+              {categories.map((c) => (
+                <option key={c.slug} value={c.slug}>
+                  {c.name}
+                </option>
+              ))}
+            </select>
+
+            {/* Search Input */}
             <input
               type="text"
               placeholder="Search jobs..."
@@ -68,6 +89,7 @@ export default function Navbar() {
               onChange={(e) => setSearch(e.target.value)}
               className="px-3 py-1 text-sm text-gray-700 outline-none"
             />
+
             <button
               type="submit"
               className="bg-blue-300 px-3 py-2 text-green-800 hover:bg-blue-500 transition"
@@ -97,7 +119,7 @@ export default function Navbar() {
                   onClick={() => setIsOpen(false)}
                   className={`block px-3 py-2 rounded-md ${
                     pathname === link.href
-                      ? "bg-blue-400 text-green-800 font-semibold"
+                      ? "bg-green-200 text-green-800 font-semibold"
                       : "hover:bg-green-500"
                   }`}
                 >
@@ -106,11 +128,24 @@ export default function Navbar() {
               </li>
             ))}
 
-            {/* Mobile Search */}
+            {/* Mobile Search with Category */}
             <form
               onSubmit={handleSearch}
               className="flex items-center bg-white rounded-lg overflow-hidden shadow-sm mt-3"
             >
+              <select
+                value={selectedCategory}
+                onChange={(e) => setSelectedCategory(e.target.value)}
+                className="px-2 py-2 text-sm text-gray-700 outline-none border-r"
+              >
+                <option value="">All Categories</option>
+                {categories.map((c) => (
+                  <option key={c.slug} value={c.slug}>
+                    {c.name}
+                  </option>
+                ))}
+              </select>
+
               <input
                 type="text"
                 placeholder="Search jobs..."
@@ -120,7 +155,7 @@ export default function Navbar() {
               />
               <button
                 type="submit"
-                className="bg-blue-400 px-3 py-2 text-green-800 hover:bg-blue-400 transition"
+                className="bg-green-300 px-3 py-2 text-green-500 hover:bg-blue-400 transition"
               >
                 <Search size={18} />
               </button>
