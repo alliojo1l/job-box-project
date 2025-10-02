@@ -73,7 +73,7 @@ export default function Navbar() {
               onChange={(e) => setSelectedCategory(e.target.value)}
               className="px-2 py-1 text-sm text-gray-700 outline-none border-r"
             >
-              <option value="">All Categories</option>
+              <option value="">Search Available Categories➡️</option>
               {categories.map((c) => (
                 <option key={c.slug} value={c.slug}>
                   {c.name}
@@ -92,7 +92,7 @@ export default function Navbar() {
 
             <button
               type="submit"
-              className="bg-blue-300 px-3 py-2 text-green-800 hover:bg-blue-500 transition"
+              className="bg-green-300 px-3 py-2 text-green-800 hover:bg-green-400 transition"
             >
               <Search size={20} />
             </button>
@@ -138,7 +138,7 @@ export default function Navbar() {
                 onChange={(e) => setSelectedCategory(e.target.value)}
                 className="px-2 py-2 text-sm text-gray-700 outline-none border-r"
               >
-                <option value="">All Categories</option>
+                <option value="">Search Available Categories </option>
                 {categories.map((c) => (
                   <option key={c.slug} value={c.slug}>
                     {c.name}
@@ -155,7 +155,7 @@ export default function Navbar() {
               />
               <button
                 type="submit"
-                className="bg-green-300 px-3 py-2 text-green-500 hover:bg-blue-400 transition"
+                className="bg-green-300 px-3 py-2 text-green-400 hover:bg-green-600 transition"
               >
                 <Search size={18} />
               </button>
