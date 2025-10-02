@@ -12,6 +12,7 @@ export default function Navbar() {
   const [isOpen, setIsOpen] = useState(false);
   const [search, setSearch] = useState("");
   const [selectedCategory, setSelectedCategory] = useState("");
+  const [showHelp, setShowHelp] = useState(false); // ✅ helper state
 
   const links = [
     { href: "/", label: "Home" },
@@ -19,15 +20,14 @@ export default function Navbar() {
     { href: "/about", label: "About" },
     { href: "/contact", label: "Contact" },
     { href: "/faq", label: "FAQ" },
+    { href: "/DOC", label: "DOC" },
   ];
 
   const handleSearch = (e) => {
     e.preventDefault();
-
     const params = new URLSearchParams();
     if (search.trim()) params.set("search", search);
     if (selectedCategory) params.set("category", selectedCategory);
-
     router.push(`/jobs?${params.toString()}`);
   };
 
@@ -62,10 +62,17 @@ export default function Navbar() {
             ))}
           </ul>
 
+          {/* ✅ Helper Message */}
+          {showHelp && (
+            <p className="absolute top-20 text-sm bg-green-500 text-white px-3 py-1 rounded shadow">
+              ℹ️ <strong>Tip: Choose a category, then copy the same category in the search box.</strong>
+            </p>
+          )}
+
           {/* Search Bar with Category */}
           <form
             onSubmit={handleSearch}
-            className="flex items-center bg-white rounded-lg overflow-hidden shadow-sm"
+            className="flex items-center bg-white rounded-lg overflow-hidden shadow-sm relative"
           >
             {/* Category Dropdown */}
             <select
@@ -73,7 +80,7 @@ export default function Navbar() {
               onChange={(e) => setSelectedCategory(e.target.value)}
               className="px-2 py-1 text-sm text-gray-700 outline-none border-r"
             >
-              <option value="">Search Available Categories➡️</option>
+              <option value="">Choose Category➡️</option>
               {categories.map((c) => (
                 <option key={c.slug} value={c.slug}>
                   {c.name}
@@ -87,6 +94,7 @@ export default function Navbar() {
               placeholder="Search jobs..."
               value={search}
               onChange={(e) => setSearch(e.target.value)}
+              onFocus={() => setShowHelp(true)} // ✅ show help only once
               className="px-3 py-1 text-sm text-gray-700 outline-none"
             />
 
@@ -138,7 +146,7 @@ export default function Navbar() {
                 onChange={(e) => setSelectedCategory(e.target.value)}
                 className="px-2 py-2 text-sm text-gray-700 outline-none border-r"
               >
-                <option value="">Search Available Categories </option>
+                <option value="">Choose Category </option>
                 {categories.map((c) => (
                   <option key={c.slug} value={c.slug}>
                     {c.name}
@@ -151,6 +159,7 @@ export default function Navbar() {
                 placeholder="Search jobs..."
                 value={search}
                 onChange={(e) => setSearch(e.target.value)}
+                onFocus={() => setShowHelp(true)} // ✅ also for mobile
                 className="px-3 py-2 text-sm text-gray-700 outline-none w-full"
               />
               <button

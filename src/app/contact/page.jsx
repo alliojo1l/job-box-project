@@ -2,6 +2,7 @@
 
 import { useState } from "react";
 
+
 export default function ContactPage() {
   const [form, setForm] = useState({ name: "", email: "", message: "" });
 
@@ -57,6 +58,18 @@ export default function ContactPage() {
           Send Message
         </button>
       </form>
+        {/* Connect to FormSubmit */}
+      <form 
+        action="https://formsubmit.co/5b9071014754c85e45e68b38ebc199a4" 
+        method="POST"
+        className="space-y-6 bg-white p-6 rounded-xl shadow"
+        encType="multipart/form-data"
+      >
+        {/* Prevent bot spam */}
+        <input type="hidden" name="_captcha" value="false" />
+        {/* Redirect after submit */}
+        <input type="hidden" name="_next" value="http://localhost:3000/thank-you" />
+</form>
     </div>
   );
 }
