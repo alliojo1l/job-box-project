@@ -13,7 +13,6 @@ export default function Home() {
         <div
           className="p-8 min-h-screen bg-cover bg-center rounded-4xl"
           style={{
-          
             backgroundImage: "url('/hero.png')", 
           }}
         >

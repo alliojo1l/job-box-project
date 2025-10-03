@@ -83,7 +83,7 @@ export default async function JobDetailsPage({ params }) {
       <div className="mt-10 pt-4 border-t border-gray-200">
         <Link
           href={`/jobs/${slug}/apply`}
-          className="inline-block  text-center bg-green-300 text-white px-6 py-3 rounded-lg text-xl font-semibold hover:bg-green-600 transition shadow-lg"
+          className="inline-block  text-center bg-green-300 text-white px-6 py-3 rounded-lg text-xl font-semibold hover:bg-green-600 transition shadow-lg"
         >
           Apply Now for {job.jobTitle}
         </Link>
