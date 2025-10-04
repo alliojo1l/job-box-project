@@ -5,6 +5,16 @@ import { usePathname, useRouter } from "next/navigation";
 import { useState } from "react";
 import { Menu, X, Search } from "lucide-react";
 import { categories } from "@/data/jobs"; // ✅ import categories
+import ThemeToggle from "@/components/ThemeToggle";
+
+export default function Navbar() {
+  return (
+    <nav className="flex justify-between items-center p-4 shadow bg-white dark:bg-gray-800">
+      <h1 className="font-bold text-xl">J-Box</h1>
+      <ThemeToggle />
+    </nav>
+  );
+}
 
 export default function Navbar() {
   const pathname = usePathname();
