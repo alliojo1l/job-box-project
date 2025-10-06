@@ -19,7 +19,7 @@ export default function Footer() {
 
         {/* ==== Quick Links ==== */}
         <div>
-          <h3 className="text-lg font-semibold text-gray-900 dark:text-gray-100 mb-3">
+          <h3 className="text-lg font-semibold text-green-600 dark:text-gray-100 mb-3">
             Quick Links
           </h3>
           <ul className="space-y-2 text-gray-700 dark:text-gray-400">
@@ -40,7 +40,7 @@ export default function Footer() {
 
         {/* ==== Contact Info ==== */}
         <div>
-          <h3 className="text-lg font-semibold text-gray-900 dark:text-gray-100 mb-3">
+          <h3 className="text-lg font-semibold text-green-600 dark:text-gray-100 mb-3">
             Contact
           </h3>
           <div className="text-gray-700 dark:text-gray-400 flex flex-col gap-2">
@@ -56,7 +56,7 @@ export default function Footer() {
 
         {/* ==== Social Media ==== */}
         <div>
-          <h3 className="text-lg font-semibold text-gray-900 dark:text-gray-100 mb-3">
+          <h3 className="text-lg font-semibold text-green-600 dark:text-gray-100 mb-3">
             Follow Us
           </h3>
           <div className="flex items-center gap-4 text-xl">
