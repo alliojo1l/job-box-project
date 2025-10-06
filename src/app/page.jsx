@@ -1,42 +1,44 @@
 import Link from "next/link";
-import { categories } from "@/data/jobs";
+import { categories } from "@/data/jobs"; 
 
 export default function Home() {
   return (
     <main className="p-8 space-y-16">
+      
+      {/* ================= HERO SECTION ================= */}
       <section
-        className="relative text-center text-white rounded-2xl p-12 shadow bg-cover bg-center"
-        style={{ backgroundImage: "url('/hero-bg.jpg')" }}
+        className="relative text-center text-white rounded-4xl p-5 shadow bg-cover bg-center"
+        style={{ backgroundImage: "url('/hero.png')" }}
       >
-        <main
-          className="p-8 min-h-screen bg-cover bg-center rounded-t-md"
+        <div
+          className="p-8 min-h-screen bg-cover bg-center rounded-4xl"
           style={{
-            backgroundImage:
-              "url('https://cdn.pixabay.com/photo/2015/05/08/10/37/green-757879_1280.jpg')",
+            backgroundImage: "url('/hero.png')", 
           }}
         >
-          
-       <div className="bg-white bg-opacity-50 p-8 rounded-xl max-w-3xl mx-auto text-green-400">
-            <h1 className="text-6xl font-bold mb-12">Find your dream job across multiple industries. Apply with just a
-            click!</h1>
-            <p className="text-8x1 font-bold">
+          <div className="bg-white/70 p-8 rounded-xl max-w-3xl mx-auto text-green-700">
+            <h1 className="text-5xl font-bold mb-8">
+              Find your dream job across multiple industries. Apply with just a click!
+            </h1>
+            
+            <p className="text-xl font-bold mb-8 text-gray-700">
               Browse categories, explore opportunities, and take the next step
               in your career journey.
             </p>
-             <div className=" text-white px-6 py-3 rounded-b-md font-bold ">
-        
-          <Link
-            href="/jobs"
-            className="bg-green-400 text-white px-6 py-3 rounded-lg font-bold hover:text-white hover:bg-green-700"
-          >
-            Browse All Jobs
-          </Link>
-        </div>
+            
+            <div className="text-white px-6 py-3 rounded-b-md font-bold ">
+              <Link
+                href="/jobs"
+                className="inline-block bg-green-500 text-white px-8 py-4 rounded-lg text-lg font-bold hover:bg-green-700 transition duration-300"
+              >
+                Browse All Jobs
+              </Link>
+            </div>
           </div>
-        </main>
-
+        </div>
       </section>
 
+      {/* ================= JOB CATEGORIES SECTION ================= */}
       <section className="bg-gray-100 rounded-2xl p-12 text-center shadow">
         <h2 className="text-3xl font-bold mb-6 text-center">Job Categories</h2>
         <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
@@ -44,7 +46,7 @@ export default function Home() {
             <Link
               key={category.slug}
               href={`/jobs?category=${category.slug}`}
-              className="p-6 bg-gray-400 shadow rounded-xl hover:shadow-lg transition text-center"
+              className="p-6 bg-gradient-to-br from-white to-green-100 shadow rounded-xl hover:shadow-xl transition text-center text-gray-800 hover:text-green-800"
             >
               <h3 className="text-xl font-semibold">{category.name}</h3>
               <p>{category.jobs.length} jobs available</p>
@@ -53,6 +55,7 @@ export default function Home() {
         </div>
       </section>
 
+      {/* ================= HOW IT WORKS SECTION ================= */}
       <section className="bg-gray-100 rounded-2xl p-12 text-center shadow">
         <h2 className="text-3xl font-bold mb-8">How It Works</h2>
         <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
@@ -77,6 +80,7 @@ export default function Home() {
           </div>
         </div>
       </section>
+      
     </main>
   );
 }
