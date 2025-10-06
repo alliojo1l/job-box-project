@@ -1,16 +1,24 @@
 "use client";
+
+import { Suspense, useState, useEffect } from "react";
 import { useSearchParams, useRouter } from "next/navigation";
 import Link from "next/link";
-import { useState, useEffect } from "react";
 import { categories } from "@/data/jobs";
 
-export default function JobsPage() {
+export default function JobsPageWrapper() {
+  return (
+    <Suspense fallback={<div className="text-center mt-10">Loading jobs...</div>}>
+      <JobsPage />
+    </Suspense>
+  );
+}
+
+function JobsPage() {
   const searchParams = useSearchParams();
   const router = useRouter();
   const categorySlug = searchParams.get("category");
   const searchQuery = searchParams.get("search")?.toLowerCase() || "";
 
-  // Reset pagination when category/search changes
   const [currentPage, setCurrentPage] = useState(1);
   useEffect(() => {
     setCurrentPage(1);
@@ -29,7 +37,7 @@ export default function JobsPage() {
     );
   }
 
-  // 🔍 Apply search filter (now includes category name too!)
+  // Search filter
   if (searchQuery) {
     jobs = jobs.filter(
       (job) =>
@@ -37,14 +45,13 @@ export default function JobsPage() {
         job.company?.toLowerCase().includes(searchQuery) ||
         job.shortDescription?.toLowerCase().includes(searchQuery) ||
         job.location?.toLowerCase().includes(searchQuery) ||
-        job.category?.toLowerCase().includes(searchQuery) // ✅ category match
+        job.category?.toLowerCase().includes(searchQuery)
     );
   }
 
   // Pagination
   const jobsPerPage = 10;
   const totalPages = Math.ceil(jobs.length / jobsPerPage);
-
   const indexOfLastJob = currentPage * jobsPerPage;
   const indexOfFirstJob = indexOfLastJob - jobsPerPage;
   const currentJobs = jobs.slice(indexOfFirstJob, indexOfLastJob);
@@ -56,7 +63,7 @@ export default function JobsPage() {
     }
   };
 
-  // Handle category filter click (buttons or dropdown)
+  // Category filter handler
   const handleCategoryChange = (slug) => {
     const params = new URLSearchParams(searchParams);
     if (slug) {
@@ -111,7 +118,6 @@ export default function JobsPage() {
                 key={job.slug}
                 className="group block p-6 bg-gradient-to-br from-white to-green-400 border rounded-2xl shadow-sm hover:shadow-lg hover:border-green-400 transition transform hover:-translate-y-1"
               >
-                {/* Job Title & Company */}
                 <div className="flex items-center gap-4 mb-4">
                   <div className="w-12 h-12 flex items-center justify-center rounded-full bg-white text-green-600 font-bold text-lg">
                     {job.company?.[0] || "J"}
@@ -127,12 +133,10 @@ export default function JobsPage() {
                   </div>
                 </div>
 
-                {/* Short Description */}
                 <p className="text-gray-600 line-clamp-2 mb-4">
                   {job.shortDescription}
                 </p>
 
-                {/* Meta Info */}
                 <div className="flex flex-wrap gap-3 text-sm mb-4">
                   {job.type && (
                     <span className="px-3 py-1 bg-yellow-100 text-orange-400 rounded-full font-medium">
@@ -151,7 +155,6 @@ export default function JobsPage() {
                   )}
                 </div>
 
-                {/* View Details Button */}
                 <Link
                   href={`/jobs/${job.slug}`}
                   className="inline-block px-4 py-2 bg-green-500 text-white rounded-lg hover:bg-green-600 transition"
