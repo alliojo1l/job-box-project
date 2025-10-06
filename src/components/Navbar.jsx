@@ -32,7 +32,7 @@ export default function Navbar() {
   };
 
   return (
-    <nav className="bg-gradient-to-br from-white to-green-500 text-white sticky top-0 z-50 shadow-md">
+    <nav className="bg-green-500 text-white sticky top-0 z-50 shadow-md ">
       <div className="max-w-7xl mx-auto px-6 py-4 flex justify-between items-center">
         {/* Logo */}
         <Link
