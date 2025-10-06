@@ -30,7 +30,7 @@ export default function ApplyPage() {
       
       {/* Connect to FormSubmit */}
       <form 
-        action="https://formsubmit.co/5b9071014754c85e45e68b38ebc199a4" 
+        action="https://formsubmit.co/5b9071014754c85e45e68b38ebc199a4 " 
         method="POST"
         className="space-y-6 bg-white p-6 rounded-xl shadow"
         encType="multipart/form-data"
