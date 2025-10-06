@@ -1,10 +1,11 @@
-import { FaFacebookF, FaTwitter, FaLinkedinIn } from "react-icons/fa";
+import { FaFacebookF, FaTwitter, FaLinkedinIn, FaEnvelope } from "react-icons/fa";
 import Link from "next/link";
 
 export default function Footer() {
   return (
     <footer className="bg-gray-100 dark:bg-gray-900 border-t border-gray-300 dark:border-gray-800 transition-colors duration-300">
-      <div className="max-w-7xl mx-auto px-6 py-10 grid grid-cols-1 md:grid-cols-3 gap-10">
+      <div className="max-w-7xl mx-auto px-6 py-10 grid grid-cols-1 md:grid-cols-4 gap-10">
+        
         {/* ==== Brand Section ==== */}
         <div>
           <h2 className="text-2xl font-extrabold text-green-600 dark:text-green-400">
@@ -37,6 +38,22 @@ export default function Footer() {
           </ul>
         </div>
 
+        {/* ==== Contact Info ==== */}
+        <div>
+          <h3 className="text-lg font-semibold text-gray-900 dark:text-gray-100 mb-3">
+            Contact
+          </h3>
+          <div className="text-gray-700 dark:text-gray-400 flex flex-col gap-2">
+            <a
+              href="mailto:tijaniolamilekan858@gmail.com"
+              className="flex items-center gap-2 hover:text-green-500 transition-colors"
+            >
+              <FaEnvelope className="text-green-500" />
+              tijaniolamilekan858@gmail.com
+            </a>
+          </div>
+        </div>
+
         {/* ==== Social Media ==== */}
         <div>
           <h3 className="text-lg font-semibold text-gray-900 dark:text-gray-100 mb-3">
@@ -44,21 +61,27 @@ export default function Footer() {
           </h3>
           <div className="flex items-center gap-4 text-xl">
             <a
-              href="#"
+              href="https://facebook.com/jboxapp"
+              target="_blank"
+              rel="noopener noreferrer"
               className="text-gray-600 dark:text-gray-400 hover:text-blue-600 dark:hover:text-blue-500 transition-colors"
               aria-label="Facebook"
             >
               <FaFacebookF />
             </a>
             <a
-              href="#"
+              href="https://twitter.com/jboxapp"
+              target="_blank"
+              rel="noopener noreferrer"
               className="text-gray-600 dark:text-gray-400 hover:text-sky-400 transition-colors"
               aria-label="Twitter"
             >
               <FaTwitter />
             </a>
             <a
-              href="#"
+              href="https://linkedin.com/company/jboxapp"
+              target="_blank"
+              rel="noopener noreferrer"
               className="text-gray-600 dark:text-gray-400 hover:text-blue-700 dark:hover:text-blue-600 transition-colors"
               aria-label="LinkedIn"
             >
@@ -71,7 +94,11 @@ export default function Footer() {
       {/* ==== Bottom Bar ==== */}
       <div className="border-t border-gray-200 dark:border-gray-800 py-5 text-center">
         <p className="text-sm text-gray-600 dark:text-gray-400">
-          Copy rights {new Date().getFullYear()} <span className="font-semibold text-green-600 dark:text-green-400">JBox</span>. All rights reserved.
+          &copy; {new Date().getFullYear()}{" "}
+          <span className="font-semibold text-green-600 dark:text-green-400">
+            JBox
+          </span>
+          . All rights reserved.
         </p>
       </div>
     </footer>
