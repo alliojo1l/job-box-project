@@ -125,7 +125,7 @@ function JobsPage() {
                   <div>
                     <Link
                       href={`/jobs/${job.slug}`}
-                      className="text-xl font-semibold text-green-400 hover:underline hover:text-green-500 transition"
+                      className="text-xl font-semibold text-green-500 hover:underline transition"
                     >
                       {job.title}
                     </Link>
@@ -133,27 +133,32 @@ function JobsPage() {
                   </div>
                 </div>
 
-                <p className="text-gray-600 line-clamp-2 mb-4">
-                  {job.shortDescription}
-                </p>
+                {/* Job Info Section */}
+                <div className="flex flex-col gap-2 mb-4">
+                  <div className="flex flex-wrap gap-3 text-sm">
+                    {job.type && (
+                      <span className="px-3 py-1 bg-yellow-100 text-orange-400 rounded-full font-medium">
+                        {job.type}
+                      </span>
+                    )}
+                    {job.location && (
+                      <span className="px-3 py-1 bg-gray-100 text-gray-700 rounded-full">
+                        {job.location}
+                      </span>
+                    )}
+                  </div>
 
-                <div className="flex flex-wrap gap-3 text-sm mb-4">
-                  {job.type && (
-                    <span className="px-3 py-1 bg-yellow-100 text-orange-400 rounded-full font-medium">
-                      {job.type}
-                    </span>
-                  )}
-                  {job.location && (
-                    <span className="px-3 py-1 bg-gray-100 text-gray-700 rounded-full">
-                      {job.location}
-                    </span>
-                  )}
+                  {/* Salary Below */}
                   {job.salary && (
-                    <span className="px-3 py-1 bg-green-100 text-green-700 rounded-full">
+                    <span className="px-3 py-1 bg-green-100 text-green-700 rounded-full text-sm w-fit">
                       {job.salary}
                     </span>
                   )}
                 </div>
+
+                <p className="text-gray-600 line-clamp-2 mb-4">
+                  {job.shortDescription}
+                </p>
 
                 <Link
                   href={`/jobs/${job.slug}`}
