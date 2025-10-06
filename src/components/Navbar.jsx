@@ -10,9 +10,8 @@ export default function Navbar() {
   const pathname = usePathname();
   const router = useRouter();
   const [isOpen, setIsOpen] = useState(false);
-  const [search, setSearch] = useState("");
   const [selectedCategory, setSelectedCategory] = useState("");
-  const [showHelp, setShowHelp] = useState(false); // ✅ helper state
+  const [showHelp, setShowHelp] = useState(false); // ✅ warning state
 
   const links = [
     { href: "/", label: "Home" },
@@ -20,15 +19,16 @@ export default function Navbar() {
     { href: "/about", label: "About" },
     { href: "/contact", label: "Contact" },
     { href: "/faq", label: "FAQ" },
-    { href: "/DOC", label: "DOC" },
   ];
 
   const handleSearch = (e) => {
     e.preventDefault();
-    const params = new URLSearchParams();
-    if (search.trim()) params.set("search", search);
-    if (selectedCategory) params.set("category", selectedCategory);
-    router.push(`/jobs?${params.toString()}`);
+    if (!selectedCategory) {
+      setShowHelp(true);
+      setTimeout(() => setShowHelp(false), 3000); // auto-hide warning
+      return;
+    }
+    router.push(`/jobs?category=${selectedCategory}`);
   };
 
   return (
@@ -43,7 +43,7 @@ export default function Navbar() {
           <span className="text-white-500 text-2xl font-extrabold">-Box</span>
         </Link>
 
-        {/* Desktop Links + Search */}
+        {/* Desktop Navigation */}
         <div className="hidden md:flex items-center space-x-6">
           <ul className="flex space-x-6">
             {links.map((link) => (
@@ -62,25 +62,18 @@ export default function Navbar() {
             ))}
           </ul>
 
-          {/* ✅ Helper Message */}
-          {showHelp && (
-            <p className="absolute top-20 text-sm bg-green-500 text-white px-3 py-1 rounded shadow">
-              ℹ️ <strong>Tip: Choose a category, then copy the same category in the search box.</strong>
-            </p>
-          )}
-
-          {/* Search Bar with Category */}
+          {/* Category Search Form */}
           <form
             onSubmit={handleSearch}
-            className="flex items-center bg-white rounded-lg overflow-hidden shadow-sm relative"
+            className="flex flex-col md:flex-row items-center bg-white rounded-lg overflow-hidden shadow-sm relative ml-4"
           >
             {/* Category Dropdown */}
             <select
               value={selectedCategory}
               onChange={(e) => setSelectedCategory(e.target.value)}
-              className="px-2 py-1 text-sm text-gray-700 outline-none border-r"
+              className="px-3 py-2 text-sm text-gray-700 outline-none border-r w-full md:w-auto"
             >
-              <option value="">Choose Category➡️</option>
+              <option value="">Select Category</option>
               {categories.map((c) => (
                 <option key={c.slug} value={c.slug}>
                   {c.name}
@@ -88,22 +81,24 @@ export default function Navbar() {
               ))}
             </select>
 
-            {/* Search Input */}
-            <input
-              type="text"
-              placeholder="Search jobs..."
-              value={search}
-              onChange={(e) => setSearch(e.target.value)}
-              onFocus={() => setShowHelp(true)} // ✅ show help only once
-              className="px-3 py-1 text-sm text-gray-700 outline-none"
-            />
-
+            {/* Search Button */}
             <button
               type="submit"
-              className="bg-green-300 px-3 py-2 text-green-800 hover:bg-green-400 transition"
+              className={`mt-2 md:mt-0 md:ml-2 px-3 py-2 rounded-lg transition w-full md:w-auto ${
+                selectedCategory
+                  ? "bg-green-400 text-white hover:bg-green-500"
+                  : "bg-gray-200 text-gray-400"
+              }`}
             >
               <Search size={20} />
             </button>
+
+            {/* Warning Message */}
+            {showHelp && !selectedCategory && (
+              <p className="text-red-500 text-sm mt-2 md:absolute md:-bottom-6 md:left-0 animate-fade">
+                ⚠️ Please select a category before searching.
+              </p>
+            )}
           </form>
         </div>
 
@@ -136,17 +131,17 @@ export default function Navbar() {
               </li>
             ))}
 
-            {/* Mobile Search with Category */}
+            {/* Mobile Category Search */}
             <form
               onSubmit={handleSearch}
-              className="flex items-center bg-white rounded-lg overflow-hidden shadow-sm mt-3"
+              className="flex flex-col bg-white rounded-lg overflow-hidden shadow-sm mt-3 p-2"
             >
               <select
                 value={selectedCategory}
                 onChange={(e) => setSelectedCategory(e.target.value)}
-                className="px-2 py-2 text-sm text-gray-700 outline-none border-r"
+                className="px-2 py-2 text-sm text-gray-700 outline-none border rounded-md"
               >
-                <option value="">Choose Category </option>
+                <option value="">Select Category</option>
                 {categories.map((c) => (
                   <option key={c.slug} value={c.slug}>
                     {c.name}
@@ -154,20 +149,22 @@ export default function Navbar() {
                 ))}
               </select>
 
-              <input
-                type="text"
-                placeholder="Search jobs..."
-                value={search}
-                onChange={(e) => setSearch(e.target.value)}
-                onFocus={() => setShowHelp(true)} // ✅ also for mobile
-                className="px-3 py-2 text-sm text-gray-700 outline-none w-full"
-              />
               <button
                 type="submit"
-                className="bg-green-300 px-3 py-2 text-green-400 hover:bg-green-600 transition"
+                className={`mt-2 px-3 py-2 rounded-lg transition ${
+                  selectedCategory
+                    ? "bg-green-400 text-white hover:bg-green-500"
+                    : "bg-gray-200 text-gray-400"
+                }`}
               >
                 <Search size={18} />
               </button>
+
+              {showHelp && !selectedCategory && (
+                <p className="text-red-500 text-sm mt-2 animate-fade">
+                  ⚠️ Please select a category before searching.
+                </p>
+              )}
             </form>
           </ul>
         </div>

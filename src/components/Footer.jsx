@@ -1,40 +1,78 @@
-import { FaFacebook, FaTwitter, FaLinkedin } from "react-icons/fa";
+import { FaFacebookF, FaTwitter, FaLinkedinIn } from "react-icons/fa";
+import Link from "next/link";
 
 export default function Footer() {
   return (
-    <footer className="bg-gray-600 text-gray-300 py-6">
-      <div className="max-w-6xl mx-auto px-4 grid grid-cols-1 md:grid-cols-3 gap-6">
-    
+    <footer className="bg-gray-100 dark:bg-gray-900 border-t border-gray-300 dark:border-gray-800 transition-colors duration-300">
+      <div className="max-w-7xl mx-auto px-6 py-10 grid grid-cols-1 md:grid-cols-3 gap-10">
+        {/* ==== Brand Section ==== */}
         <div>
-          <h2 className="text-xl font-bold text-white">JBox</h2>
-          <p className="text-lg mt-3">
-            Find your next job with ease. JBox connects talent with
-            opportunities.
+          <h2 className="text-2xl font-extrabold text-green-600 dark:text-green-400">
+            JBox
+          </h2>
+          <p className="text-gray-600 dark:text-gray-400 mt-3 leading-relaxed">
+            Find your next career opportunity effortlessly. 
+            <br />JBox connects top talent with meaningful jobs across industries.
           </p>
         </div>
 
+        {/* ==== Quick Links ==== */}
         <div>
-          <h3 className="text-lg font-semibold text-white mb-2">Quick Links</h3>
-          <ul className="space-y-1 text-sm">
-            <li><a href="/"  className="hover:text-green-400">Home</a></li>
-            <li><a href="/jobs" className="hover:text-green-400">Jobs</a></li>
-            <li><a href="/about" className="hover:text-green-400">About</a></li>
-            <li><a href="/contact" className="hover:text-green-400">Contact</a></li>
+          <h3 className="text-lg font-semibold text-gray-900 dark:text-gray-100 mb-3">
+            Quick Links
+          </h3>
+          <ul className="space-y-2 text-gray-700 dark:text-gray-400">
+            <li>
+              <Link href="/" className="hover:text-green-500 transition-colors">Home</Link>
+            </li>
+            <li>
+              <Link href="/jobs" className="hover:text-green-500 transition-colors">Jobs</Link>
+            </li>
+            <li>
+              <Link href="/about" className="hover:text-green-500 transition-colors">About</Link>
+            </li>
+            <li>
+              <Link href="/contact" className="hover:text-green-500 transition-colors">Contact</Link>
+            </li>
           </ul>
         </div>
 
+        {/* ==== Social Media ==== */}
         <div>
-          <h3 className="text-lg font-semibold text-white mb-2">Follow Us</h3>
-          <div className="flex gap-4 text-xl">
-            <a href="#" className="hover:text-blue-500"><FaFacebook /></a>
-            <a href="#" className="hover:text-sky-400"><FaTwitter /></a>
-            <a href="#" className="hover:text-blue-600"><FaLinkedin /></a>
+          <h3 className="text-lg font-semibold text-gray-900 dark:text-gray-100 mb-3">
+            Follow Us
+          </h3>
+          <div className="flex items-center gap-4 text-xl">
+            <a
+              href="#"
+              className="text-gray-600 dark:text-gray-400 hover:text-blue-600 dark:hover:text-blue-500 transition-colors"
+              aria-label="Facebook"
+            >
+              <FaFacebookF />
+            </a>
+            <a
+              href="#"
+              className="text-gray-600 dark:text-gray-400 hover:text-sky-400 transition-colors"
+              aria-label="Twitter"
+            >
+              <FaTwitter />
+            </a>
+            <a
+              href="#"
+              className="text-gray-600 dark:text-gray-400 hover:text-blue-700 dark:hover:text-blue-600 transition-colors"
+              aria-label="LinkedIn"
+            >
+              <FaLinkedinIn />
+            </a>
           </div>
         </div>
       </div>
 
-      <div className="text-center text-sm text-gray-200 mt-6 border-t border-gray-700 pt-4">
-        <p>Copyright 2025 JBox Application. All rights reserved.</p>
+      {/* ==== Bottom Bar ==== */}
+      <div className="border-t border-gray-200 dark:border-gray-800 py-5 text-center">
+        <p className="text-sm text-gray-600 dark:text-gray-400">
+          Copy rights {new Date().getFullYear()} <span className="font-semibold text-green-600 dark:text-green-400">JBox</span>. All rights reserved.
+        </p>
       </div>
     </footer>
   );
