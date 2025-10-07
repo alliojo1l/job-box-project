@@ -30,7 +30,7 @@ export default function ApplyPage() {
       
       {/* Connect to FormSubmit */}
       <form 
-        action="https://formsubmit.co/5b9071014754c85e45e68b38ebc199a4 " 
+        action="https://formsubmit.co/5b9071014754c85e45e68b38ebc199a4" 
         method="POST"
         className="space-y-6 bg-white p-6 rounded-xl shadow"
         encType="multipart/form-data"
@@ -41,7 +41,7 @@ export default function ApplyPage() {
         {/* Prevent bot spam */}
         <input type="hidden" name="_captcha" value="false" />
         {/* Redirect after submit */}
-        <input type="hidden" name="_next" value="http://localhost:3000/thank-you" />
+        <input type="hidden" name="_next" value="http://j-box.vercel.app/thank-you" />
 
         <div>
           <label className="block text-sm font-medium">Full Name</label>
