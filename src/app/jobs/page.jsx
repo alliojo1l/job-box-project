@@ -116,10 +116,10 @@ function JobsPage() {
             {currentJobs.map((job) => (
               <div
                 key={job.slug}
-                className="group block p-6 bg-gradient-to-br from-white to-green-400 border rounded-2xl shadow-sm hover:shadow-lg hover:border-green-400 transition transform hover:-translate-y-1"
+                className="group block p-6 bg-white border rounded-2xl shadow-sm hover:shadow-lg hover:border-green-400 transition transform hover:-translate-y-1"
               >
                 <div className="flex items-center gap-4 mb-4">
-                  <div className="w-12 h-12 flex items-center justify-center rounded-full bg-white text-green-600 font-bold text-lg">
+                  <div className="w-12 h-12 flex items-center justify-center rounded-full bg-blue-20 text-green-600 font-bold text-lg">
                     {job.company?.[0] || "J"}
                   </div>
                   <div>
@@ -162,7 +162,7 @@ function JobsPage() {
 
                 <Link
                   href={`/jobs/${job.slug}`}
-                  className="inline-block px-4 py-2 bg-green-500 text-white rounded-lg hover:bg-green-600 transition"
+                  className="inline-block px-4 py-2 bg-green-300 text-white rounded-lg hover:bg-green-600 transition"
                 >
                   View Details
                 </Link>
