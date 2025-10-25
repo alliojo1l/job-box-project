@@ -31,7 +31,7 @@ export default function AboutPage() {
               while helping employers find the right talent efficiently.
             </p>
           </div>
-          <div className="p-6 bg-blue-50 rounded-xl shadow">
+          <div className="p-6 bg-green-50 rounded-xl shadow">
             <h2 className="text-2xl font-semibold mb-3">Our Vision</h2>
             <p className="text-gray-700 leading-7">
               To become the leading job platform that bridges the gap between
@@ -43,22 +43,22 @@ export default function AboutPage() {
 
         {/* Core Features */}
         <section>
-          <h2 className="text-3xl font-bold text-center mb-8">What We Offer</h2>
+          <h2 className="text-3xl text-white font-bold text-center mb-8">What We Offer</h2>
           <div className="grid md:grid-cols-3 gap-8">
-            <div className="p-6 bg-white rounded-xl shadow text-center">
+            <div className="p-6 bg-green-50 rounded-xl shadow text-center">
               <h3 className="text-xl font-semibold mb-2">Easy Job Search</h3>
               <p className="text-gray-600">
                 Browse jobs by category and apply with just a few clicks.
               </p>
             </div>
-            <div className="p-6 bg-white rounded-xl shadow text-center">
+            <div className="p-6 bg-green-50 rounded-xl shadow text-center">
               <h3 className="text-xl font-semibold mb-2">For All Levels</h3>
               <p className="text-gray-600">
                 From fresh graduates to experienced professionals, JBox is for
                 everyone.
               </p>
             </div>
-            <div className="p-6 bg-white rounded-xl shadow text-center">
+            <div className="p-6 bg-green-50 rounded-xl shadow text-center">
               <h3 className="text-xl font-semibold mb-2">Free & Accessible</h3>
               <p className="text-gray-600">
                 100% free for job seekers. Start applying today without
