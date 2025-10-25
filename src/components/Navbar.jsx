@@ -37,10 +37,10 @@ export default function Navbar() {
         {/* Logo */}
         <Link
           href="/"
-          className="flex items-center gap-2 px-3 py-2 bg-gradient-to-br from-green-500 to-white rounded-lg shadow-md transition cursor-pointer"
+          className="flex items-center gap-2 px-3 py-2 bg-white rounded-lg shadow-md transition cursor-pointer"
         >
-          <span className="text-white text-2xl font-extrabold">J</span>
-          <span className="text-white-500 text-2xl font-extrabold">-Box</span>
+          <span className="text-green-500 text-2xl font-extrabold">J</span>
+          <span className="text-green-500 text-2xl font-extrabold">-Box</span>
         </Link>
 
         {/* Desktop Navigation */}

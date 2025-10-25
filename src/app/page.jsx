@@ -4,7 +4,7 @@ import { categories } from "@/data/jobs";
 export default function Home() {
   return (
     <main className="p-4 md:p-8 space-y-16">
-      {/* ================= HERO SECTION ================= */}
+      {/* HERO SECTION */}
       <section
         className="relative text-center text-white rounded-4xl p-5 shadow bg-cover bg-center"
         style={{ backgroundImage: "url('/hero.png')" }}
@@ -33,7 +33,7 @@ export default function Home() {
         </div>
       </section>
 
-      {/* ================= JOB CATEGORIES SECTION ================= */}
+      {/* JOB CATEGORIES SECTION  */}
       <section className="bg-gray-100 rounded-2xl p-12 text-center shadow">
         <h2 className="text-3xl font-bold mb-6">Job Categories</h2>
         <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-6">
@@ -50,7 +50,7 @@ export default function Home() {
         </div>
       </section>
 
-      {/* ================= HOW IT WORKS SECTION ================= */}
+      {/* HOW IT WORKS SECTION */}
       <section className="bg-gray-100 rounded-2xl p-12 text-center shadow">
         <h2 className="text-3xl font-bold mb-8">How It Works</h2>
         <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-8">
