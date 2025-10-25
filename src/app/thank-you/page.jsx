@@ -4,7 +4,7 @@ export default function ThankYouPage() {
       <div className="bg-white shadow-lg rounded-2xl p-10 text-center max-w-lg">
         <h1 className="text-3xl font-bold text-green-600 mb-4">🎉 Thank You!</h1>
         <p className="text-gray-700 mb-6">
-          Your application has been submitted successfully. We’ll review it and get back to you soon.
+          Your application has been submitted successfully. We'll review it and get back to you soon.
         </p>
         <a 
           href="/" 

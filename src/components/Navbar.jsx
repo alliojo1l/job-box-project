@@ -32,18 +32,18 @@ export default function Navbar() {
   };
 
   return (
-    <nav className="bg-green-500 text-white sticky top-0 z-50 shadow-md ">
+    <nav className="bg-green-500 text-white sticky top-0 z-50 shadow-md">
       <div className="max-w-7xl mx-auto px-6 py-4 flex justify-between items-center">
-        {/* Logo */}
+        {/* ==== Logo ==== */}
         <Link
           href="/"
-          className="flex items-center gap-2 px-3 py-2 bg-white rounded-lg shadow-md transition cursor-pointer"
+          className="flex items-center gap-2 px-3 py-2 bg-white rounded-lg shadow transition cursor-pointer"
         >
           <span className="text-green-500 text-2xl font-extrabold">J</span>
           <span className="text-green-500 text-2xl font-extrabold">-Box</span>
         </Link>
 
-        {/* Desktop Navigation */}
+        {/* ==== Desktop Navigation ==== */}
         <div className="hidden md:flex items-center space-x-6">
           <ul className="flex space-x-6">
             {links.map((link) => (
@@ -62,12 +62,12 @@ export default function Navbar() {
             ))}
           </ul>
 
-          {/* Category Search Form */}
+          {/* ==== Category Search Form ==== */}
           <form
             onSubmit={handleSearch}
             className="flex flex-col md:flex-row items-center bg-white rounded-lg overflow-hidden shadow-sm relative ml-4"
           >
-            {/* Category Dropdown */}
+            {/* Dropdown */}
             <select
               value={selectedCategory}
               onChange={(e) => setSelectedCategory(e.target.value)}
@@ -102,16 +102,17 @@ export default function Navbar() {
           </form>
         </div>
 
-        {/* Mobile Menu Button */}
+        {/* ==== Mobile Menu Button ==== */}
         <button
           className="md:hidden p-2 rounded-md hover:bg-green-700 transition"
           onClick={() => setIsOpen(!isOpen)}
+          aria-label="Toggle menu"
         >
           {isOpen ? <X size={24} /> : <Menu size={24} />}
         </button>
       </div>
 
-      {/* Mobile Menu */}
+      {/* ==== Mobile Menu ==== */}
       {isOpen && (
         <div className="md:hidden bg-green-700">
           <ul className="flex flex-col space-y-2 px-6 py-4">
@@ -131,7 +132,7 @@ export default function Navbar() {
               </li>
             ))}
 
-            {/* Mobile Category Search */}
+            {/* ==== Mobile Category Search ==== */}
             <form
               onSubmit={handleSearch}
               className="flex flex-col bg-white rounded-lg overflow-hidden shadow-sm mt-3 p-2"
